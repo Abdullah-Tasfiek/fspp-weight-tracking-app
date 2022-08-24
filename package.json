@@ -1,0 +1,15 @@
+{
+  "name": "fspp-weight-tracking-app",
+  "version": "1.0.0",
+  "description": "fullstack weight tracking app",
+  "main": "back-end/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "weight",
+    "tracking"
+  ],
+  "author": "Abdullah Tasfiek",
+  "license": "ISC"
+}
