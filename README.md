@@ -8,7 +8,7 @@ This is the only weight tracking app you'll ever need!
 - [Deployed Frontend]()
 - [Trello Board]()
 - [ERD](https://miro.com/app/board/uXjVPcx_GAA=/?share_link_id=759371293763)
-- [Wireframes]()
+- [Wireframes](https://drive.google.com/drive/folders/1RfoaPdJxZwxDKBvMiSYGgDHfKqMjHi-W?usp=sharing)
 
 ## Local Setup
 
