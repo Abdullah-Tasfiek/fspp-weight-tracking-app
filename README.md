@@ -6,9 +6,9 @@ This is the only weight tracking app you'll ever need!
 
 - [Deployed API Server]()
 - [Deployed Frontend]()
-- [Trello Board]()
-- [ERD]()
-- [Wireframes]()
+- [Trello Board](https://trello.com/invite/b/MXkEbiwf/33f70fb3b17173fc754dc0eb41602455/kanban-template)
+- [ERD](https://miro.com/app/board/uXjVPcx_GAA=/?share_link_id=759371293763)
+- [Wireframes](https://drive.google.com/drive/folders/1RfoaPdJxZwxDKBvMiSYGgDHfKqMjHi-W?usp=sharing)
 
 ## Local Setup
 
