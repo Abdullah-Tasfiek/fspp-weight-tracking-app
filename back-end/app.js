@@ -2,6 +2,7 @@
 const express = require("express");
 const cors = require("cors");
 const foodsControllers = require("./controllers/foodsController");
+const weightsControllers = require("./controllers/weightsController");
 
 // CONFIGURATION
 const app = express();
@@ -10,6 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/myfoods", foodsControllers);
+app.use("/myweight", weightsControllers);
 
 // ROUTES
 app.get("/", (req, res) => {
