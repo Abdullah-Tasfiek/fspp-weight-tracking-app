@@ -21,10 +21,3 @@ CREATE TABLE weights (
     current_weight INT,
     goal_weight INT
 );
-
--- CREATE TABLE user (
---     id SERIAL PRIMARY KEY,
---     first_name TEXT NOT NULL,
---     last_name TEXT NOT NULL,
---     email VARCHAR(100) NOT NULL
--- );

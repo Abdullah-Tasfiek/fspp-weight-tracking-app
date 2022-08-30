@@ -4,6 +4,7 @@
   "description": "fullstack weight tracking app",
   "main": "back-end/server.js",
   "scripts": {
+    "start": "cd back-end && npm install && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
