@@ -4,7 +4,7 @@ function Calories({ food }) {
   return (
     <div className="hover:text-red-800">
       <Link to={`/myfoods/${food.id}`}>
-        <h4>{food.calories}</h4>
+        <h4>{food.date}</h4>
       </Link>
     </div>
   );
