@@ -11,7 +11,7 @@ This is the only weight tracking app you'll ever need!
 - [Wireframes](https://drive.google.com/drive/folders/1RfoaPdJxZwxDKBvMiSYGgDHfKqMjHi-W?usp=sharing)
 
 ## BetterHealth
-BetterHealth is an app that allows a user to keep track of how many calories they eat, as well as log their meals and weight! All in one place.
+BetterHealth is an app that allows a user to keep track of how many calories they eat, as well as log their meals and track their weight! All in one place.
 
 ## Local Setup
 
