@@ -2,14 +2,14 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const foodsControllers = require("./controllers/foodsController");
+const weightsControllers = require("./controllers/weightsController");
 // const bcrypt = require("bcrypt");
 // const session = require("express-session");
 // const flash = require("express-flash");
 // const passport = require("passport");
 // const methodOverride = require("method-override");
-const foodsControllers = require("./controllers/foodsController");
-const weightsControllers = require("./controllers/weightsController");
-const loginControllers = require("./controllers/loginController");
+// const loginControllers = require("./controllers/loginController");
 // const initializePassport = require("./passportConfig");
 // initializePassport(
 //   passport,
@@ -26,7 +26,7 @@ app.use(cors());
 app.use(express.json());
 app.use("/myfoods", foodsControllers);
 app.use("/myweight", weightsControllers);
-app.use("/login", loginControllers);
+// app.use("/login", loginControllers);
 // app.set("view engine", "ejs");
 //send input details from our frontend to our server
 // app.use(express.urlencoded({ extended: false }));
