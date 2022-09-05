@@ -13,7 +13,7 @@ const Nav = () => {
     nav.classList.toggle("hidden");
   };
   return (
-    <nav className="pr-5 bg-blue-500">
+    <nav className="pr-5">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <Link className="hover:text-red-800" to="/">

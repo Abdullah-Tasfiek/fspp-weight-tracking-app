@@ -21,23 +21,40 @@ const WeightIndex = () => {
 
   return (
     <div>
-      <h2>Weight Logs</h2>
-      <section>
-        <article className="Logs">
-          <h3>Date</h3>
-          <div className="card">
-            {weights.map((weight) => {
-              return <Date key={weight.id} weight={weight} />;
-            })}
-          </div>
-          <h3>Weight</h3>
-          <div className="card">
-            {weights.map((weight) => {
-              return <Weight key={weight.id} weight={weight} />;
-            })}
-          </div>
-        </article>
-      </section>
+      <h2 className="grid place-items-center text-5xl">Weight Logs</h2>
+      <br></br>
+      <table className="table-auto min-w-full text-center">
+        <thead className="border-b bg-gray-800">
+          <tr>
+            <th
+              scope="col"
+              className="text-sm font-medium text-white px-6 py-4"
+            >
+              Date
+            </th>
+            <th
+              scope="col"
+              className="text-sm font-medium text-white px-6 py-4"
+            >
+              Weight
+            </th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr className="bg-white border-b ">
+            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+              {weights.map((weight) => {
+                return <Date key={weight.id} weight={weight} />;
+              })}
+            </td>
+            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+              {weights.map((weight) => {
+                return <Weight key={weight.id} weight={weight} />;
+              })}
+            </td>
+          </tr>
+        </tbody>
+      </table>
       <button className="button">
         <Link to="/myweight">Back</Link>
       </button>

@@ -53,7 +53,7 @@ function EditFood() {
   return (
     <div className="Edit">
       <form onSubmit={handleSubmit} id="edit-form">
-        <label htmlFor="date">Date: </label>
+        <label htmlFor="date">Date:</label>
         <br></br>
         <input
           id="date"
@@ -127,6 +127,7 @@ function EditFood() {
           value={`${food.fiber}`}
           onChange={handleTextChange}
         />
+        <br></br>
         <br></br>
         <input type="submit"/>
       </form>

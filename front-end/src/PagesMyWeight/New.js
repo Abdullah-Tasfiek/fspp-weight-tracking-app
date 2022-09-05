@@ -2,8 +2,7 @@ import NewWeight from "../Components_Weight/NewWeight";
 
 function NewLog() {
   return (
-    <div className="NewLog">
-      <h3>Weight in Pounds</h3>
+    <div className="form">
       <NewWeight />
     </div>
   );

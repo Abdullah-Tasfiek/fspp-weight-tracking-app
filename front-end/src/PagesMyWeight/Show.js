@@ -2,7 +2,7 @@ import ShowWeight from "../Components_Weight/ShowWeight";
 
 function ShowLog() {
   return (
-    <div className="ShowLog">
+    <div className="form">
       <h2>Weights</h2>
       <ShowWeight />
     </div>

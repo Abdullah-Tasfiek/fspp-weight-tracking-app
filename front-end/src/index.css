@@ -51,11 +51,11 @@
 }
 
 .form {
-  background-color: #ffe4e1;
+  background-color: #D4F1F4;
 }
 
 .button, input[type=submit] {
-  background-color: #EA4C89;
+  background-color: #05445E;
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
@@ -83,10 +83,19 @@
 
 .button:hover,
 .button:focus {
-  background-color: #F082AC;
+  background-color: #05445E;
 }
 
 input[type=submit]:hover,
 input[type=submit]:focus {
-  background-color: #F082AC;
+  background-color: #05445E;
+}
+
+.input {
+  display: inline-block;
+  float: right;
+}
+
+nav {
+  background-color: #4169E1;
 }
