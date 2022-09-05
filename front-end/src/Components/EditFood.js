@@ -21,9 +21,7 @@ function EditFood() {
   const handleTextChange = (event) => {
     setFood({ ...food, [event.target.id]: event.target.value });
   };
-  // const handleCheckbox = () => {
-  //   setSnack({ ...snack, is_healthy: !snack.is_healthy });
-  // };
+
 
   useEffect(() => {
     axios
@@ -133,7 +131,7 @@ function EditFood() {
         <input type="submit"/>
       </form>
       <Link to={`/myfoods/${id}`}>
-        <button className="back">{`Back to ${food.name}`}</button>
+        <button className="button back">{`Back to ${food.name}`}</button>
       </Link>
     </div>
   );

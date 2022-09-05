@@ -19,14 +19,15 @@ const getWeight = async (id) => {
 };
 
 const createWeight = async ({
+  date,
   starting_weight,
   current_weight,
   goal_weight,
 }) => {
   try {
     const newLog = await db.one(
-      "INSERT INTO weights (starting_weight, current_weight, goal_weight) VALUES($1, $2, $3) RETURNING *",
-      [starting_weight, current_weight, goal_weight]
+      "INSERT INTO weights (date, starting_weight, current_weight, goal_weight) VALUES($1, $2, $3, $4) RETURNING *",
+      [date, starting_weight, current_weight, goal_weight]
     );
     return newLog;
   } catch (error) {
@@ -36,12 +37,12 @@ const createWeight = async ({
 
 const updateWeight = async (
   id,
-  { starting_weight, current_weight, goal_weight, ...otherStuff }
+  { date, starting_weight, current_weight, goal_weight, ...otherStuff }
 ) => {
   try {
     const updateLog = await db.one(
-      "UPDATE weights SET starting_weight=$1, current_weight=$2, goal_weight=$3 where id=$4 RETURNING *",
-      [starting_weight, current_weight, goal_weight, id]
+      "UPDATE weights SET date=$1, starting_weight=$2, current_weight=$3, goal_weight=$4 where id=$5 RETURNING *",
+      [date, starting_weight, current_weight, goal_weight, id]
     );
     return updateLog;
   } catch (error) {

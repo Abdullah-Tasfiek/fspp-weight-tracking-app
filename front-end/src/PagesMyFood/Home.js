@@ -1,9 +1,7 @@
 const Home = () => {
   return (
     <div>
-      <h1>
-        Welcome to BetterHealth! The only Weight Tracking app you'll ever need!
-      </h1>
+      <h1 className="content-center">Welcome to BetterHealth!</h1>
     </div>
   );
 };

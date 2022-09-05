@@ -29,30 +29,42 @@ const ShowFood = () => {
   const { date, name, description, calories, protein, carbs, fats, fiber } =
     foods;
   return (
-    <div>
-      <h3>{name}</h3>
-      <article>
-        <div>
-          <h3>Date: {date}</h3>
-          <h3>Description: {description}</h3>
-          <h3>Calories: {calories}</h3>
-          <h3>Protein: {protein}g</h3>
-          <h3>Carbs: {carbs}g</h3>
-          <h3>Fats: {fats}g</h3>
-          <h3>Fiber: {fiber}g</h3>
-        </div>
-      </article>
+    <div className="content-center">
+      <div className="text-3xl">
+        <span className="underline">Name:</span> {name}
+        <br></br>
+        <br></br>
+        <span className="underline">Date:</span> {date}
+        <br></br>
+        <br></br>
+        <span className="underline">Description:</span> {description}
+        <br></br>
+        <br></br>
+        <span className="underline">Calories:</span> {calories}
+        <br></br>
+        <br></br>
+        <span className="underline">Protein:</span> {protein}g
+        <br></br>
+        <br></br>
+        <span className="underline">Carbs:</span> {carbs}g
+        <br></br>
+        <br></br>
+        <span className="underline">Fats:</span> {fats}g
+        <br></br>
+        <br></br>
+        <span className="underline">Fiber:</span> {fiber}g
+      </div>
 
       <br />
-      <button href="/myfoods">
+      <button className="button" href="/myfoods">
         <Link to={"/myfoods"}>Back</Link>
       </button>
       <br />
-      <button>
+      <button className="button">
         <Link to={`/myfoods/${id}/edit`}>Edit Food</Link>
       </button>
       <br></br>
-      <button id={foods.id} onClick={handleDelete}>
+      <button className="button" id={foods.id} onClick={handleDelete}>
         Delete Entry
       </button>
     </div>

@@ -8,7 +8,7 @@ INSERT INTO foods (date, name, description, calories, protein, carbs, fats, fibe
 ('August 28', 'Chicken Breast', '6 oz', 200, 38, 0, 3, 0),
 ('August 28', 'Chicken Salad', 'no dressing', 250, 30, 7, 1, 5);
 
-INSERT INTO weights (starting_weight, current_weight, goal_weight) VALUES
-(230, 230, 180),
-(200, 197, 190),
-(120, 130, 135);
+INSERT INTO weights (date, starting_weight, current_weight, goal_weight) VALUES
+('August 26', 230, 230, 180),
+('August 25', 200, 197, 190),
+('August 24', 120, 130, 135);

@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS food_log;
 CREATE DATABASE food_log; 
 
-\c food_log; 
+\c food_log;
 
 CREATE TABLE foods (
     id SERIAL PRIMARY KEY,
@@ -17,6 +17,7 @@ CREATE TABLE foods (
 
 CREATE TABLE weights (
     id SERIAL PRIMARY KEY,
+    date TEXT NOT NULL,
     starting_weight INT,
     current_weight INT,
     goal_weight INT

@@ -2,8 +2,9 @@ import ShowFood from "../Components/ShowFood";
 
 function Show() {
   return (
-    <div className="Show">
-      <h2>Foods</h2>
+    <div className="grid place-items-center">
+      <h2 className="text-6xl">Food Item: </h2>
+      <br></br>
       <ShowFood />
     </div>
   );

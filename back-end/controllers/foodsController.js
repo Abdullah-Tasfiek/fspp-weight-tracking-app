@@ -10,8 +10,8 @@ const {
 
 //INDEX
 foods.get("/", async (req, res) => {
-  const allfoods = await db.any("SELECT * FROM foods");
-  res.json({ payload: allfoods });
+  const allFoods = await db.any("SELECT * FROM foods");
+  res.json({ payload: allFoods });
 });
 
 //SHOW
@@ -25,7 +25,7 @@ foods.get("/:id", async (req, res) => {
   }
 });
 
-// //CREATE
+//CREATE
 foods.post("/", async (req, res) => {
   try {
     const food = await createFood(req.body);
