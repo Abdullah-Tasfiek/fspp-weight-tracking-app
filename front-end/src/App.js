@@ -10,7 +10,6 @@ import WeightIndex from "./PagesMyWeight/Index";
 import NewLog from "./PagesMyWeight/New";
 import EditLog from "./PagesMyWeight/Edit";
 import ShowLog from "./PagesMyWeight/Show";
-import HomeLogin from "./PagesLogin/HomeLogin";
 
 function App() {
   return (
@@ -20,7 +19,6 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<HomeLogin />} />
             <Route path="/myfoods" element={<Index />} />
             <Route path="/myweight/logs" element={<WeightIndex />} />
             <Route path="/myfoods/:id" element={<Show />} />
