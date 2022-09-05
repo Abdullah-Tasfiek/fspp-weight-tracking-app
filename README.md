@@ -57,6 +57,8 @@ REACT_APP_API_URL=http://localhost:3333
 - `npm install` - install npm packages listed in `package.json`
 - `npm start` - make sure your React app can start
 
+## Inspiration
+The inspiration for BetterHealth came because I wanted to keep track of my weight, the foods I would have eaten, and the number of calories I would have consumed throughout the day. Being able to track my foods, weight, and calories all on BetterHealth makes it much easier for me to stay organized. By knowing the foods I eat and how many calories I consume, I'm more likely to reach my fitness goals!
 
 
 
