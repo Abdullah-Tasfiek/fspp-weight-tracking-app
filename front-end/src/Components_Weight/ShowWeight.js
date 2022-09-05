@@ -30,12 +30,14 @@ const ShowWeight = () => {
   const { date, current_weight } = weights;
   return (
     <div>
-      <article>
-        <div>
-          <h3>Date: {date}</h3>
-          <h3>Current Weight: {current_weight} lbs</h3>
-        </div>
-      </article>
+      <div className="text-2xl">
+        <span className="underline">Date:</span> {date}
+        <br></br>
+        <br></br>
+        <span className="underline">Weight:</span> {current_weight} lbs
+        <br></br>
+        <br></br>
+      </div>
 
       <br />
       <button className="button" href="/myweight/logs">

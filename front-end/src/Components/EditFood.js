@@ -22,7 +22,6 @@ function EditFood() {
     setFood({ ...food, [event.target.id]: event.target.value });
   };
 
-
   useEffect(() => {
     axios
       .get(`${API}/myfoods/${id}`)
@@ -57,6 +56,7 @@ function EditFood() {
         <br></br>
         <input
           id="date"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-48 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           value={`${food.date}`}
           type="text"
           onChange={handleTextChange}
@@ -67,6 +67,7 @@ function EditFood() {
         <br></br>
         <input
           id="name"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-48 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           value={`${food.name}`}
           type="text"
           onChange={handleTextChange}
@@ -77,6 +78,7 @@ function EditFood() {
         <br></br>
         <input
           id="description"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-48 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           type="text"
           name="description"
           value={`${food.description}`}
@@ -87,6 +89,7 @@ function EditFood() {
         <br></br>
         <input
           id="calories"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-48 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           type="number"
           value={`${food.calories}`}
           onChange={handleTextChange}
@@ -96,6 +99,7 @@ function EditFood() {
         <br></br>
         <input
           id="protein"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-48 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           type="number"
           value={`${food.protein}`}
           onChange={handleTextChange}
@@ -105,6 +109,7 @@ function EditFood() {
         <br></br>
         <input
           id="carbs"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-48 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           type="number"
           value={`${food.carbs}`}
           onChange={handleTextChange}
@@ -114,6 +119,7 @@ function EditFood() {
         <br></br>
         <input
           id="fats"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-48 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           type="number"
           value={`${food.fats}`}
           onChange={handleTextChange}
@@ -123,13 +129,14 @@ function EditFood() {
         <br></br>
         <input
           id="fiber"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-48 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           type="number"
           value={`${food.fiber}`}
           onChange={handleTextChange}
         />
         <br></br>
         <br></br>
-        <input type="submit"/>
+        <input type="submit" />
       </form>
       <Link to={`/myfoods/${id}`}>
         <button className="button back">{`Back to ${food.name}`}</button>

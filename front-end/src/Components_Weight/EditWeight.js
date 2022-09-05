@@ -48,23 +48,29 @@ function EditWeight() {
   return (
     <div className="Edit">
       <form onSubmit={handleSubmit} id="edit-form">
-        <label htmlFor="date">Date: </label>
+        <label className="text-2xl" htmlFor="date">
+          Date:{" "}
+        </label>
         <br></br>
         <input
           id="date"
           value={`${weight.date}`}
           type="text"
           onChange={handleTextChange}
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-48 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           required
         />
         <br></br>
-        <label htmlFor="current_weight">Weight: </label>
+        <label className="text-2xl" htmlFor="current_weight">
+          Weight:{" "}
+        </label>
         <br></br>
         <input
           id="current_weight"
           value={`${weight.current_weight}`}
           type="number"
           onChange={handleTextChange}
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-48 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           required
         />
         <br></br>
