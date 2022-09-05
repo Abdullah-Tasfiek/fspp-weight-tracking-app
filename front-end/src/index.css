@@ -83,12 +83,12 @@
 
 .button:hover,
 .button:focus {
-  background-color: #05445E;
+  background-color: #A1B5F0;
 }
 
 input[type=submit]:hover,
 input[type=submit]:focus {
-  background-color: #05445E;
+  background-color: #A1B5F0;
 }
 
 .input {

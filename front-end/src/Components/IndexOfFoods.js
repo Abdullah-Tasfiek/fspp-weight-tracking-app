@@ -21,17 +21,16 @@ const FoodIndex = () => {
       });
   }, []);
 
-  let totalCaloriesConsumed = 0;
 
   return (
     <div>
-      {foods.map((food, index) => {
-        totalCaloriesConsumed += parseInt(food.calories);
-        return <TotalCalories key={index} food={food} index={index} />;
-      })}
-      <h2 className="text-4xl">Total Calories Consumed: {totalCaloriesConsumed}</h2>
+      <h2>
+        <TotalCalories foods={foods} />;
+      </h2>
       <Link className="nav-link" to="/myfoods/new">
-        <button className="button" href="/myfoods/new">Add Food</button>
+        <button className="button" href="/myfoods/new">
+          Add Food
+        </button>
       </Link>
       <table className="table-auto min-w-full text-center">
         <thead className="border-b bg-gray-800">
