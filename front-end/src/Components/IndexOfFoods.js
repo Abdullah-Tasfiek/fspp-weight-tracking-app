@@ -58,7 +58,7 @@ const FoodIndex = () => {
           className="button"
           href="/myfoods"
         >
-          Delete all Entries
+          Delete All Entries
         </button>
       </Link>
       <table className="table-auto min-w-full text-center">
