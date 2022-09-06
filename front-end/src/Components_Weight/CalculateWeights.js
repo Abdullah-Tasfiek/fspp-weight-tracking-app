@@ -14,9 +14,6 @@ export default function CalculateWeights() {
       .catch((e) => console.log("Visual call error", e));
   }, []);
 
-  let weightsArray = [];
-  let calculateWeightArray = [];
-
   const weightGainOrLoss = (starting, current) => {
     let weightLoss = 0;
     let weightGained = 0;
@@ -30,24 +27,30 @@ export default function CalculateWeights() {
     }
   };
 
+  const getStartingWeight = (array) => {
+    let weightsArray = [];
+    array.map((weight) => {
+      return weightsArray.push(weight.starting_weight);
+    });
+    return weightsArray[weightsArray.length - 1];
+  };
+
+  const getCurrentWeight = (array) => {
+    let calculateWeightArray = [];
+    array.map((weight) => {
+      return calculateWeightArray.push(weight.current_weight);
+    });
+    return calculateWeightArray[calculateWeightArray.length - 1];
+  };
+
   return (
     <div>
-      {data.map((weight) => {
-        weightsArray.push(weight.starting_weight);
-      })}
-      {data.map((weight) => {
-        calculateWeightArray.push(weight.current_weight);
-      })}
-      <br></br>
-      <br></br>
+      <div>{getStartingWeight(data)}</div>
       <h1 className="text-2xl">
-        Your starting weight is: {weightsArray[weightsArray.length - 1]} lbs
+        Your starting weight is: {getStartingWeight(data)} lbs
       </h1>
       <h1 className="text-2xl">
-        {weightGainOrLoss(
-          weightsArray[weightsArray.length - 1],
-          calculateWeightArray[calculateWeightArray.length - 1]
-        )}
+        {weightGainOrLoss(getStartingWeight(data), getCurrentWeight(data))}
       </h1>
     </div>
   );

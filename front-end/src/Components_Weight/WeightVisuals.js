@@ -7,7 +7,6 @@ const API = process.env.REACT_APP_API_URL;
 
 export default function Visuals() {
   const [active, setActive] = useState(null);
-  const [toggle, setToggle] = useState(true);
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -26,10 +25,6 @@ export default function Visuals() {
   const width = 400;
   const half = width / 2;
 
-  const clickHandler = () => {
-    setToggle(!toggle);
-  };
-
   return (
     <div className="grid place-items-center">
       <svg width={width} height={width}>
@@ -39,7 +34,7 @@ export default function Visuals() {
             pieValue={(data) => data.current_weight}
             outerRadius={half}
             innerRadius={({ data }) => {
-              const size = active && active.symbol == data.symbol ? 12 : 8;
+              const size = active && active.symbol === data.symbol ? 12 : 8;
               return half - size;
             }}
           >
