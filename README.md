@@ -4,8 +4,8 @@ This is the only weight tracking app you'll ever need!
 
 ## Important Links
 
-- [Deployed API Server]()
-- [Deployed Frontend]()
+- [Deployed API Server](https://dry-river-25692.herokuapp.com/)
+- [Deployed Frontend](https://betterhealth.netlify.app)
 - [Trello Board](https://trello.com/invite/b/MXkEbiwf/33f70fb3b17173fc754dc0eb41602455/kanban-template)
 - [ERD](https://miro.com/app/board/uXjVPcx_GAA=/?share_link_id=759371293763)
 - [Wireframes](https://drive.google.com/drive/folders/1RfoaPdJxZwxDKBvMiSYGgDHfKqMjHi-W?usp=sharing)
