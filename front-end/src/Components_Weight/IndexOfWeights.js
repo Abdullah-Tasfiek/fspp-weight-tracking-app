@@ -40,7 +40,7 @@ const WeightIndex = () => {
             </th>
           </tr>
         </thead>
-        <tbody >
+        <tbody>
           <tr className="bg-white border-b ">
             <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
               {weights.map((weight) => {

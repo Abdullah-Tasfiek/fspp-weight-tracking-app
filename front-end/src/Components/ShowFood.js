@@ -13,6 +13,7 @@ const ShowFood = () => {
       setFoods(response.data.payload);
     });
   }, [id, navigate, API]);
+
   const deleteFood = () => {
     axios
       .delete(`${API}/myfoods/${id}`)
@@ -43,14 +44,11 @@ const ShowFood = () => {
         <span className="underline">Calories:</span> {calories}
         <br></br>
         <br></br>
-        <span className="underline">Protein:</span> {protein}g
+        <span className="underline">Protein:</span> {protein}g<br></br>
         <br></br>
+        <span className="underline">Carbs:</span> {carbs}g<br></br>
         <br></br>
-        <span className="underline">Carbs:</span> {carbs}g
-        <br></br>
-        <br></br>
-        <span className="underline">Fats:</span> {fats}g
-        <br></br>
+        <span className="underline">Fats:</span> {fats}g<br></br>
         <br></br>
         <span className="underline">Fiber:</span> {fiber}g
       </div>
