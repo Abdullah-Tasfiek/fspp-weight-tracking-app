@@ -25,6 +25,20 @@ export default function Visuals() {
   const width = 400;
   const half = width / 2;
 
+  const goalWeight = (array) => {
+    let weightsArray = [];
+    let number = 0;
+    array.map((weight) => {
+      return weightsArray.push(weight.goal_weight);
+    });
+    for (let i = 0; i < weightsArray.length; i++) {
+      if (weightsArray[i] !== 0) {
+        number = weightsArray[i];
+      }
+    }
+    return number;
+  };
+
   return (
     <div className="grid place-items-center">
       <svg width={width} height={width}>
@@ -61,9 +75,7 @@ export default function Visuals() {
               {`Current Weight: ${weightsArray[weightsArray.length - 1]} lbs`}
             </Text>
             <Text textAnchor="middle" fill="#aaa" className="text-1xl" dy={160}>
-              {`Goal Weight: ${
-                goalWeightArray[goalWeightArray.length - 1]
-              } lbs`}
+              {`Goal Weight: ${goalWeight(data)} lbs`}
             </Text>
           </>
         </Group>

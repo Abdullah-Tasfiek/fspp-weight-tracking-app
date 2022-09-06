@@ -29,23 +29,34 @@ export default function CalculateWeights() {
 
   const getStartingWeight = (array) => {
     let weightsArray = [];
+    let number = 0;
     array.map((weight) => {
       return weightsArray.push(weight.starting_weight);
     });
-    return weightsArray[weightsArray.length - 1];
+    for (let i = 0; i < weightsArray.length; i++) {
+      if (weightsArray[i] !== 0) {
+        number = weightsArray[i];
+      }
+    }
+    return number;
   };
 
   const getCurrentWeight = (array) => {
-    let calculateWeightArray = [];
+    let currentWeightArray = [];
+    let number = 0;
     array.map((weight) => {
-      return calculateWeightArray.push(weight.current_weight);
+      return currentWeightArray.push(weight.current_weight);
     });
-    return calculateWeightArray[calculateWeightArray.length - 1];
+    for (let i = 0; i < currentWeightArray.length; i++) {
+      if (currentWeightArray[i] !== 0) {
+        number = currentWeightArray[i];
+      }
+    }
+    return number;
   };
 
   return (
     <div>
-      <div>{getStartingWeight(data)}</div>
       <h1 className="text-2xl">
         Your starting weight is: {getStartingWeight(data)} lbs
       </h1>
