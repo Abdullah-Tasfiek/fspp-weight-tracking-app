@@ -58,7 +58,7 @@ export default function CalculateWeights() {
   return (
     <div>
       <h1 className="text-2xl">
-        Your starting weight is: {getStartingWeight(data)} lbs
+        Your starting weight is {getStartingWeight(data)} lbs!
       </h1>
       <h1 className="text-2xl">
         {weightGainOrLoss(getStartingWeight(data), getCurrentWeight(data))}

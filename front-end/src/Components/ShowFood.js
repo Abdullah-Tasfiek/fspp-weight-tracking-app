@@ -32,10 +32,10 @@ const ShowFood = () => {
   return (
     <div className="content-center">
       <div className="text-3xl">
-        <span className="underline">Name:</span> {name}
-        <br></br>
-        <br></br>
         <span className="underline">Date:</span> {date}
+        <br></br>
+        <br></br>
+        <span className="underline">Name:</span> {name}
         <br></br>
         <br></br>
         <span className="underline">Description:</span> {description}

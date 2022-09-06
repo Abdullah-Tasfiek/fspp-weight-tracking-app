@@ -21,6 +21,20 @@ const FoodIndex = () => {
       });
   }, []);
 
+  console.log("foods:", foods);
+
+  const clearLogs = (foods) => {
+    const API = process.env.REACT_APP_API_URL;
+    for (let i = 0; i < foods.length; i++) {
+      axios
+        .delete(`${API}/myfoods/${foods[i].id}`)
+        .then(() => {})
+        .catch((err) => {
+          console.warn(err);
+        });
+    }
+  };
+
   let totalCaloriesConsumed = 0;
 
   return (
@@ -29,9 +43,23 @@ const FoodIndex = () => {
         totalCaloriesConsumed += parseInt(food.calories);
         return <TotalCalories key={index} food={food} index={index} />;
       })}
-      <h2 className="text-4xl">Total Calories Consumed: {totalCaloriesConsumed}</h2>
+      <h2 className="text-4xl">
+        Total Calories Consumed: {totalCaloriesConsumed}
+      </h2>
       <Link className="nav-link" to="/myfoods/new">
-        <button className="button" href="/myfoods/new">Add Food</button>
+        <button className="button" href="/myfoods/new">
+          Add Food
+        </button>
+      </Link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <Link className="nav-link" to="/myfoods">
+        <button
+          onClick={() => clearLogs(foods)}
+          className="button"
+          href="/myfoods"
+        >
+          Delete all Entries
+        </button>
       </Link>
       <table className="table-auto min-w-full text-center">
         <thead className="border-b bg-gray-800">
@@ -76,7 +104,6 @@ const FoodIndex = () => {
           </tr>
         </tbody>
       </table>
-
       <button className="button">
         <Link to="/">Back</Link>
       </button>
