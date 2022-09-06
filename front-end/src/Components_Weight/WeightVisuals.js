@@ -71,10 +71,15 @@ export default function Visuals() {
           {data.map((food) => caloriesArray.push(food.calories))}
           {data.map((food) => caloriesArray.push(food.calories))}
           <>
-            <Text textAnchor="middle" fill="#000" className="text-3xl">
+            <Text textAnchor="middle" fill="#014421" className="text-3xl">
               {`Current Weight: ${weightsArray[weightsArray.length - 1]} lbs`}
             </Text>
-            <Text textAnchor="middle" fill="#aaa" className="text-1xl" dy={160}>
+            <Text
+              textAnchor="middle"
+              fill="#20B2AA"
+              className="text-1xl"
+              dy={160}
+            >
               {`Goal Weight: ${goalWeight(data)} lbs`}
             </Text>
           </>

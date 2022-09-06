@@ -43,7 +43,7 @@ const FoodIndex = () => {
         totalCaloriesConsumed += parseInt(food.calories);
         return <TotalCalories key={index} food={food} index={index} />;
       })}
-      <h2 className="text-4xl">
+      <h2 className="text-3xl">
         Total Calories Consumed: {totalCaloriesConsumed}
       </h2>
       <Link className="nav-link" to="/myfoods/new">

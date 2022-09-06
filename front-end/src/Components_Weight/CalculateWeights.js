@@ -57,12 +57,15 @@ export default function CalculateWeights() {
 
   return (
     <div>
-      <h1 className="text-2xl">
+      <br></br>
+      <br></br>
+      <h1 className="text-2xl grid place-items-center">
         Your starting weight is {getStartingWeight(data)} lbs!
       </h1>
-      <h1 className="text-2xl">
+      <h1 className="text-2xl grid place-items-center">
         {weightGainOrLoss(getStartingWeight(data), getCurrentWeight(data))}
       </h1>
+      <br />
     </div>
   );
 }
