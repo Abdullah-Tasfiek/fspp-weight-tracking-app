@@ -104,9 +104,9 @@ const FoodIndex = () => {
           </tr>
         </tbody>
       </table>
-      <button className="button">
-        <Link to="/">Back</Link>
-      </button>
+      <Link to="/">
+        <button className="button">Back</button>
+      </Link>
     </div>
   );
 };

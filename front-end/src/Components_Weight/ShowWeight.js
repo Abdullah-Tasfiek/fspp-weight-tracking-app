@@ -40,13 +40,15 @@ const ShowWeight = () => {
       </div>
 
       <br />
-      <button className="button" href="/myweight/logs">
-        <Link to={"/myweight/logs"}>Back to Logs</Link>
-      </button>
+      <Link to={"/myweight/logs"}>
+        <button className="button" href="/myweight/logs">
+          Back to Logs
+        </button>
+      </Link>
       <br />
-      <button className="button">
-        <Link to={`/myweight/logs/${id}/edit`}>Edit Weight Log</Link>
-      </button>
+      <Link to={`/myweight/logs/${id}/edit`}>
+        <button className="button">Edit Weight Log</button>
+      </Link>
       <br></br>
       <button className="button" id={weights.id} onClick={handleDelete}>
         Delete This Log

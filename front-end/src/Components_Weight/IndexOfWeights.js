@@ -55,9 +55,9 @@ const WeightIndex = () => {
           </tr>
         </tbody>
       </table>
-      <button className="button">
-        <Link to="/myweight">Back</Link>
-      </button>
+      <Link to="/myweight">
+        <button className="button">Back</button>
+      </Link>
     </div>
   );
 };

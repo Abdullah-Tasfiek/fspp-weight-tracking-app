@@ -112,9 +112,9 @@ function NewWeight() {
       </div>
       <br></br>
       <div className="grid place-items-center">
-        <button className="button">
-          <Link to="/myweight/logs">View Your Weight Logs</Link>
-        </button>
+        <Link to="/myweight/logs">
+          <button className="button">View Your Weight logs</button>
+        </Link>
       </div>
     </div>
   );

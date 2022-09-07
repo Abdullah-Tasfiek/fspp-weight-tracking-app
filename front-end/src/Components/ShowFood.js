@@ -54,13 +54,15 @@ const ShowFood = () => {
       </div>
 
       <br />
-      <button className="button" href="/myfoods">
-        <Link to={"/myfoods"}>Back</Link>
-      </button>
+      <Link to={"/myfoods"}>
+        <button className="button" href="/myfoods">
+          Back
+        </button>
+      </Link>
       <br />
-      <button className="button">
-        <Link to={`/myfoods/${id}/edit`}>Edit Food</Link>
-      </button>
+      <Link to={`/myfoods/${id}/edit`}>
+        <button className="button">Edit Food</button>
+      </Link>
       <br></br>
       <button className="button" id={foods.id} onClick={handleDelete}>
         Delete Entry
