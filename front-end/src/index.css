@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Khojki:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,6 +11,8 @@
   height: 24px;
   transition: all 0.25s;
   position: relative;
+  right: 22em;
+  top: 0.3em;
 }
 
 .hamburger-top,
@@ -20,7 +23,7 @@
   left: 0;
   width: 24px;
   height: 2px;
-  background: #000;
+  background: white;
   transform: rotate(0);
   transition: all 0.5s;
 }
@@ -51,11 +54,11 @@
 }
 
 .form {
-  background-color: #D4F1F4;
+  background-color: white;
 }
 
 .button, input[type=submit] {
-  background-color: #05445E;
+  background-color: #23517E;
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
@@ -83,12 +86,12 @@
 
 .button:hover,
 .button:focus {
-  background-color: #A1B5F0;
+  background-color: #23517E;
 }
 
 input[type=submit]:hover,
 input[type=submit]:focus {
-  background-color: #A1B5F0;
+  background-color: #23517E;
 }
 
 .input {
@@ -97,5 +100,5 @@ input[type=submit]:focus {
 }
 
 nav {
-  background-color: #4169E1;
+  background-color: white;
 }

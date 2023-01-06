@@ -10,6 +10,8 @@ import WeightIndex from "./PagesMyWeight/Index";
 import NewLog from "./PagesMyWeight/New";
 import EditLog from "./PagesMyWeight/Edit";
 import ShowLog from "./PagesMyWeight/Show";
+import LandingPage from "./Components/LandingPage";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -18,7 +20,8 @@ function App() {
         <Nav />
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/myfoods" element={<Index />} />
             <Route path="/myweight/logs" element={<WeightIndex />} />
             <Route path="/myfoods/:id" element={<Show />} />
@@ -29,6 +32,7 @@ function App() {
             <Route path="/myweight/logs/:id/edit" element={<EditLog />} />
             <Route path="*" element={<FourOFour />} />
           </Routes>
+          <Footer />
         </main>
       </Router>
     </div>
