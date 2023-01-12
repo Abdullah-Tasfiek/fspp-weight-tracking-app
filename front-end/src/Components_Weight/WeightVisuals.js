@@ -1,12 +1,8 @@
 import { useState, useEffect } from "react";
-import { Pie } from "@visx/shape";
-import { Group } from "@visx/group";
-import { Text } from "@visx/text";
 import axios from "axios";
 const API = process.env.REACT_APP_API_URL;
 
 export default function Visuals() {
-  const [active, setActive] = useState(null);
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -17,13 +13,6 @@ export default function Visuals() {
       })
       .catch((e) => console.log("Visual call error", e));
   }, []);
-
-  let weightsArray = [];
-  let goalWeightArray = [];
-  let caloriesArray = [];
-  let i = 0;
-  const width = 400;
-  const half = width / 2;
 
   const goalWeight = (array) => {
     let weightsArray = [];
@@ -39,52 +28,20 @@ export default function Visuals() {
     return number;
   };
 
+  const updateWeightValues = (array) => {
+    let weightsArray = [];
+    array.map((weight) => weightsArray.push(weight.current_weight));
+    return weightsArray[weightsArray.length - 1];
+  };
+
   return (
     <div className="grid place-items-center">
-      <svg width={width} height={width}>
-        <Group top={half} left={half}>
-          <Pie
-            data={data}
-            pieValue={(data) => data.current_weight}
-            outerRadius={half}
-            innerRadius={({ data }) => {
-              const size = active && active.symbol === data.symbol ? 12 : 8;
-              return half - size;
-            }}
-          >
-            {(pie) => {
-              return pie.arcs.map((arc) => {
-                return (
-                  <g
-                    key={i++}
-                    onMouseEnter={() => setActive(arc.data)}
-                    onMouseLeave={() => setActive(null)}
-                  >
-                    <path d={pie.path(arc)}></path>
-                  </g>
-                );
-              });
-            }}
-          </Pie>
-          {data.map((weight) => weightsArray.push(weight.current_weight))}
-          {data.map((weight) => goalWeightArray.push(weight.goal_weight))}
-          {data.map((food) => caloriesArray.push(food.calories))}
-          {data.map((food) => caloriesArray.push(food.calories))}
-          <>
-            <Text textAnchor="middle" fill="#014421" className="text-3xl">
-              {`Current Weight: ${weightsArray[weightsArray.length - 1]} lbs`}
-            </Text>
-            <Text
-              textAnchor="middle"
-              fill="#20B2AA"
-              className="text-1xl"
-              dy={160}
-            >
-              {`Goal Weight: ${goalWeight(data)} lbs`}
-            </Text>
-          </>
-        </Group>
-      </svg>
+      <div>
+        <div className="text-3xl">
+          {`Current Weight: ${updateWeightValues(data)} lbs`}
+        </div>
+        <div>{`Goal Weight: ${goalWeight(data)} lbs`}</div>
+      </div>
     </div>
   );
 }

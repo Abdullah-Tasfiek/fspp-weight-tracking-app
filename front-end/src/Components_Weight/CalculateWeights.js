@@ -20,10 +20,20 @@ export default function CalculateWeights() {
 
     if (starting >= current) {
       weightLoss = starting - current;
-      return `You've lost a total of ${weightLoss} lbs!`;
+      return (
+        <div>
+          <img src={require("../Assets/weight-loss.png")}></img>
+          {weightLoss} lbs
+        </div>
+      );
     } else if (starting <= current) {
       weightGained = current - starting;
-      return `You've gained a total of ${weightGained} lbs!`;
+      return (
+        <div>
+          <img src={require("../Assets/weight-gain.png")}></img>
+          {weightGained} lbs
+        </div>
+      );
     }
   };
 
@@ -55,17 +65,39 @@ export default function CalculateWeights() {
     return number;
   };
 
+  const goalWeight = (array) => {
+    let weightsArray = [];
+    let number = 0;
+    array.map((weight) => {
+      return weightsArray.push(weight.goal_weight);
+    });
+    for (let i = 0; i < weightsArray.length; i++) {
+      if (weightsArray[i] !== 0) {
+        number = weightsArray[i];
+      }
+    }
+    return number;
+  };
+
   return (
-    <div>
-      <br></br>
-      <br></br>
-      <h1 className="text-2xl grid place-items-center">
-        Your starting weight is {getStartingWeight(data)} lbs!
-      </h1>
-      <h1 className="text-2xl grid place-items-center">
-        {weightGainOrLoss(getStartingWeight(data), getCurrentWeight(data))}
-      </h1>
-      <br />
+    <div >
+      <div className="grid grid-cols-2 text-xl place-items-center" >
+        <div className="">
+          <img src={require("../Assets/start.png")}></img>
+          {getStartingWeight(data)} lbs
+        </div>
+        <div className="text-center">
+          {weightGainOrLoss(getStartingWeight(data), getCurrentWeight(data))}
+        </div>
+        <div className="text-align">
+          <img src={require("../Assets/current-weight.png")}></img>
+          {getCurrentWeight(data)} lbs
+        </div>
+        <div className="">
+          <img src={require("../Assets/goal.png")}></img>
+          {goalWeight(data)} lbs
+        </div>
+      </div>
     </div>
   );
 }

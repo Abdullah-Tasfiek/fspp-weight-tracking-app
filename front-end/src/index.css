@@ -102,3 +102,7 @@ input[type=submit]:focus {
 nav {
   background-color: white;
 }
+
+.MacroChart {
+  text-align: center;
+}

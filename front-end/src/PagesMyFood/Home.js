@@ -1,11 +1,13 @@
-import Visuals from "../Components_Weight/WeightVisuals";
+import HomeTable from "../Components/HomeTable";
 import CalculateWeights from "../Components_Weight/CalculateWeights";
+import MacroChart from "../Components/MacroChart";
 
 const Home = () => {
   return (
-    <div className="form">
+    <div className="form p-6">
       <CalculateWeights />
-      <Visuals />
+      <HomeTable />
+      <MacroChart />
     </div>
   );
 };

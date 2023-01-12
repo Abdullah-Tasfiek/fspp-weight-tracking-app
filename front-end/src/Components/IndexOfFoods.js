@@ -41,7 +41,7 @@ const FoodIndex = () => {
     <div>
       {foods.map((food, index) => {
         totalCaloriesConsumed += parseInt(food.calories);
-        return <TotalCalories key={index} food={food} index={index} />;
+        // return <TotalCalories key={index} food={food} index={index} />;
       })}
       <h2 className="text-3xl">
         Total Calories Consumed: {totalCaloriesConsumed}
