@@ -12,6 +12,7 @@ import EditLog from "./PagesMyWeight/Edit";
 import ShowLog from "./PagesMyWeight/Show";
 import LandingPage from "./Components/LandingPage";
 import Footer from "./Components/Footer";
+import Onboarding from "./Components_Onboarding/Onboarding";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<LandingPage />} />
+            <Route path="/profile/welcome" element={<Onboarding />} />
             <Route path="/home" element={<Home />} />
             <Route path="/myfoods" element={<Index />} />
             <Route path="/myweight/logs" element={<WeightIndex />} />

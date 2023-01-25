@@ -28,7 +28,12 @@ export default function DailySummary() {
       })}
       <div>
         Total Calories Consumed {foods.calories}
-        <div className="text-green text-2xl">{totalCaloriesConsumed}</div>
+        <button>
+          <span className="text-blue">reset</span>
+        </button>
+        <div className="text-green text-5xl font-bold">
+          {totalCaloriesConsumed}
+        </div>
       </div>
       <Link to="/myfoods/new" className="bg-grey">
         Add Food
