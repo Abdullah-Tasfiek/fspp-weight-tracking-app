@@ -22,7 +22,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/profile/welcome" element={<Onboarding />} />
+            <Route path="/welcome" element={<Onboarding />} />
             <Route path="/home" element={<Home />} />
             <Route path="/myfoods" element={<Index />} />
             <Route path="/myweight/logs" element={<WeightIndex />} />

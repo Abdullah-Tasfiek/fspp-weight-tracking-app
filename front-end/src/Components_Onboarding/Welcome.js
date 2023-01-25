@@ -11,18 +11,18 @@ export default function Welcome() {
         </div>
       </div>
       <div className="landingCard__steps">
-        <img src={require("../Assets/weight-loss.png")} alt="checkmark"/>
+        <img src={require("../Assets/check.png")} alt="checkmark" />
         <div>You've taken the first step by signing up.</div>
-        <img src={require("../Assets/weight-loss.png")} alt="profile" />
+        <img src={require("../Assets/face-detection.png")} alt="profile" />
         <div>
           Now I need to know a little about you so that we can decide on a
           healthy weight goal.
         </div>
-        <img src={require("../Assets/weight-loss.png")} alt="filter"/>
+        <img src={require("../Assets/setting.png")} alt="filter" />
         <div>Then we can set some daily targets to help you get there.</div>
       </div>
       <div className="landingCard__footer">
-        <button>GET STARTED</button>
+        <button className="shadow-xl">GET STARTED</button>
       </div>
     </div>
   );

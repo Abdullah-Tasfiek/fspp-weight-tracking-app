@@ -13,7 +13,7 @@ const Nav = () => {
     nav.classList.toggle("hidden");
   };
   return (
-    <nav className="pr-5 bg-blue">
+    <nav className="pr-5 py-3 bg-blue shadow-xl">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <Link to="/home">
