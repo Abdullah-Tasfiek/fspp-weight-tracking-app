@@ -22,7 +22,9 @@ export default function Welcome() {
         <div>Then we can set some daily targets to help you get there.</div>
       </div>
       <div className="landingCard__footer">
-        <button className="shadow-xl">GET STARTED</button>
+        <a href="/welcome/about-you">
+          <button className="shadow-xl">GET STARTED</button>
+        </a>
       </div>
     </div>
   );

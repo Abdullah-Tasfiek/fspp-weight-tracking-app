@@ -12,7 +12,9 @@ import EditLog from "./PagesMyWeight/Edit";
 import ShowLog from "./PagesMyWeight/Show";
 import LandingPage from "./Components/LandingPage";
 import Footer from "./Components/Footer";
-import Onboarding from "./Components_Onboarding/Onboarding";
+import Welcome from "./Components_Onboarding/Welcome";
+import AboutYou from "./Components_Onboarding/AboutYou";
+import GoalWeight from "./Components_Onboarding/GoalWeight";
 
 function App() {
   return (
@@ -22,7 +24,9 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/welcome" element={<Onboarding />} />
+            <Route path="/welcome" element={<Welcome />} />
+            <Route path="/welcome/about-you" element={<AboutYou />} />
+            <Route path="/welcome/target-weight" element={<GoalWeight />} />
             <Route path="/home" element={<Home />} />
             <Route path="/myfoods" element={<Index />} />
             <Route path="/myweight/logs" element={<WeightIndex />} />
