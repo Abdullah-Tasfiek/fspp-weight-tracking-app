@@ -6,13 +6,45 @@ import TextField from "@mui/material/TextField";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
+import Box from "@mui/material/Box";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import FormHelperText from "@mui/material/FormHelperText";
+import InputAdornment from "@mui/material/InputAdornment";
 
 export default function AboutYou() {
-  const [value, setValue] = React.useState(dayjs("2023-01-26T21:11:54"));
+  const [value, setValue] = React.useState(dayjs("2023-01-26"));
+  const [gender, setGender] = React.useState("");
+  const [feet, setFeet] = React.useState("");
+  const [inches, setInches] = React.useState("");
+  const [pounds, setPounds] = React.useState("");
 
   const handleChange = (newValue) => {
     setValue(newValue);
   };
+
+  const handleGenderChange = (event) => {
+    setGender(event.target.value);
+  };
+
+  const handleFeetChange = (event) => {
+    setFeet(event.target.value);
+  };
+
+  const handleInchesChange = (event) => {
+    setInches(event.target.value);
+  };
+
+  const handlePoundsChange = (event) => {
+    setPounds(event.target.value);
+  };
+
+  //   const validateWeight = (input) => {
+  //     if ()
+  //   }
 
   return (
     <div className="onboarding">
@@ -60,29 +92,121 @@ export default function AboutYou() {
           Tell me a little bit about yourself.
         </div>
         <div className="onboarding__about">
-          <label>Date of Birth</label>
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DesktopDatePicker
+              label="Date of Birth"
               inputFormat="MM/DD/YYYY"
               value={value}
               onChange={handleChange}
               renderInput={(params) => <TextField {...params} />}
+              className="w-60"
             />
           </LocalizationProvider>
-          <label>Gender</label>
-          <input></input>
+          <br></br>
+          <Box sx={{ minWidth: 120 }}>
+            <FormControl className="w-60">
+              <InputLabel id="demo-simple-select-label">Gender</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={gender}
+                label="Age"
+                onChange={handleGenderChange}
+              >
+                <MenuItem value={"Male"}>Male</MenuItem>
+                <MenuItem value={"Female"}>Female</MenuItem>
+                <MenuItem value={"Non-Binary"}>Non-Binary</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
+          <br></br>
           <label>Height</label>
-          <input></input>
+          <br></br>
+          <div className="inline-block">
+            <Box sx={{ minWidth: 120 }}>
+              <FormControl className="w-60">
+                <InputLabel id="demo-simple-select-label">Feet</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={feet}
+                  label="Feet"
+                  onChange={handleFeetChange}
+                >
+                  <MenuItem value={1}>1</MenuItem>
+                  <MenuItem value={2}>2</MenuItem>
+                  <MenuItem value={3}>3</MenuItem>
+                  <MenuItem value={4}>4</MenuItem>
+                  <MenuItem value={5}>5</MenuItem>
+                  <MenuItem value={6}>6</MenuItem>
+                  <MenuItem value={7}>7</MenuItem>
+                  <MenuItem value={8}>8</MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
+            <br></br>
+            <Box sx={{ minWidth: 120 }}>
+              <FormControl className="w-40">
+                <InputLabel id="demo-simple-select-label">Inches</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={inches}
+                  label="Feet"
+                  onChange={handleInchesChange}
+                >
+                  <MenuItem value={0}>0</MenuItem>
+                  <MenuItem value={1}>1</MenuItem>
+                  <MenuItem value={2}>2</MenuItem>
+                  <MenuItem value={3}>3</MenuItem>
+                  <MenuItem value={4}>4</MenuItem>
+                  <MenuItem value={5}>5</MenuItem>
+                  <MenuItem value={6}>6</MenuItem>
+                  <MenuItem value={7}>7</MenuItem>
+                  <MenuItem value={8}>8</MenuItem>
+                  <MenuItem value={9}>9</MenuItem>
+                  <MenuItem value={10}>10</MenuItem>
+                  <MenuItem value={11}>11</MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
+          </div>
+          <br></br>
           <label>Weight</label>
-          <input></input>
+          <br></br>
+          <FormControl sx={{ m: 0, width: "21.3ch" }} variant="outlined">
+            <OutlinedInput
+              id="outlined-adornment-weight"
+              endAdornment={<InputAdornment position="end">lbs</InputAdornment>}
+              aria-describedby="outlined-weight-helper-text"
+              inputProps={{
+                "aria-label": "weight",
+              }}
+              value={pounds}
+              onChange={handlePoundsChange}
+            />
+          </FormControl>
+          {/* <TextField
+            id="outlined-basic"
+            label="Pounds"
+            variant="outlined"
+            className="w-40"
+            onChange={handlePoundsChange}
+          /> */}
         </div>
         <div className="onboarding__footer">
-          <div className="text-left">
-            <Link to="/welcome">Back</Link>
+          <div>
+            <img src={require("../Assets/back.png")}></img>
+            <Link to="/welcome">
+              <div className="text-left">Back</div>
+            </Link>
           </div>
-          <Link to="/welcome/target-weight">
-            <input type="submit" value="Next" />
-          </Link>
+          <div className="right-10">
+            <Link to="/welcome/target-weight">
+              <img src={require("../Assets/next.png")}></img>
+              <input type="submit" className="appearance-none" value="Next" />
+            </Link>
+          </div>
         </div>
       </form>
     </div>
