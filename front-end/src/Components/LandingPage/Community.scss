@@ -1,0 +1,14 @@
+.community {
+    &__image {
+        max-width: 1000px;
+    }
+    &__text {
+        color: white;
+        position: absolute;
+        right: 40%;
+        font-size: 60px;
+        top: 175%;
+        background-color: black;
+        
+    }
+}
