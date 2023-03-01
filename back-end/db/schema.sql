@@ -3,6 +3,20 @@ CREATE DATABASE food_log;
 
 \c food_log;
 
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    image TEXT NOT NULL,
+    email TEXT,
+    age INT,
+    gender TEXT,
+    height TEXT,
+    starting_weight INT,
+    current_weight INT,
+    goal_weight INT,
+    firebase_id TEXT
+);
+
 CREATE TABLE foods (
     id SERIAL PRIMARY KEY,
     date TEXT NOT NULL,

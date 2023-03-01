@@ -1,6 +1,21 @@
-\c dahh1r933l64ci; 
+\c dahh1r933l64ci;
+DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS foods;
 DROP TABLE IF EXISTS weights;
+
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    image TEXT NOT NULL,
+    email TEXT,
+    age INT,
+    gender TEXT,
+    height TEXT,
+    starting_weight INT,
+    current_weight INT,
+    goal_weight INT,
+    firebase_id TEXT
+);
 
 CREATE TABLE foods (
     id SERIAL PRIMARY KEY,

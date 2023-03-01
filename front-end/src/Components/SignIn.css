@@ -1,0 +1,20 @@
+#backBtn{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.signin{
+    display: grid;
+    justify-content: center;
+}
+
+p {
+    text-align: center;
+}
+
+div.copyright {
+    display: grid;
+    grid-template-columns: 1;
+    justify-content:center;
+    margin-top:41vh;
+}

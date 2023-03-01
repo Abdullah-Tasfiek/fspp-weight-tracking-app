@@ -1,0 +1,56 @@
+.exerciseCards__title {
+    font-size: 50px;
+    padding: 17px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+
+    &__subsection {
+    margin-top: 25px;
+    font-size: 25px;
+    padding: 2px;
+    }
+}
+.exerciseCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+    column-gap: 50px;
+}
+.exerciseCard {
+    background-color: #F3F2F8;
+    width: 300px;
+    border-radius: 8px;
+      &__image {
+        background-color: #6CBC8B;
+         border-radius: 6px;
+      }
+    
+      &__heading {
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        padding: 5px;
+        border-bottom: solid #DADCE0;
+      }
+    &__details {
+      font-size: 14px;
+      margin-bottom: 5px;
+      padding: 7px;
+    }
+    
+    &__body {
+      padding: 5px
+    }
+  }
+  
+  .image {
+      max-width: 300px;
+      border-radius: 4px
+  }
+  
+  .key {
+    color: blue;
+    font-weight: bold;
+  }
+  
+  

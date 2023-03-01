@@ -1,0 +1,43 @@
+.landingComponent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    background-color: lightblue;
+    
+    &__heading {
+        text-align: left;
+        padding: 160px;
+
+        &__text {
+        color: #789c2b;
+        font-size: 55px;
+        margin-bottom: 20px;
+
+        }
+
+    }
+
+    &__body__text {
+        color: black;
+        padding: 3px;
+    }
+}
+
+.landingComponent_image {
+    max-width: 500px;
+    margin: auto;
+    padding: 10px;
+    margin-top: 45px;
+}
+
+.landingComponent_button {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.text {
+    margin-bottom: 20px;
+}
+.name {
+    text-decoration: underline;
+}

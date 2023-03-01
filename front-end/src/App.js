@@ -10,11 +10,13 @@ import WeightIndex from "./PagesMyWeight/Index";
 import NewLog from "./PagesMyWeight/New";
 import EditLog from "./PagesMyWeight/Edit";
 import ShowLog from "./PagesMyWeight/Show";
-import LandingPage from "./Components/LandingPage";
+import LandingPage from "./Components/LandingPage/LandingPage";
 import Footer from "./Components/Footer";
 import Welcome from "./Components_Onboarding/Welcome";
 import AboutYou from "./Components_Onboarding/AboutYou";
 import GoalWeight from "./Components_Onboarding/GoalWeight";
+
+const API = process.env.REACT_APP_API_URL;
 
 function App() {
   return (
@@ -23,7 +25,6 @@ function App() {
         <Nav />
         <main>
           <Routes>
-            <Route path="/" element={<LandingPage />} />
             <Route path="/welcome" element={<Welcome />} />
             <Route path="/welcome/about-you" element={<AboutYou />} />
             <Route path="/welcome/target-weight" element={<GoalWeight />} />
@@ -37,6 +38,7 @@ function App() {
             <Route path="/myfoods/:id/edit" element={<Edit />} />
             <Route path="/myweight/logs/:id/edit" element={<EditLog />} />
             <Route path="*" element={<FourOFour />} />
+            <Route path="/" element={<LandingPage />} />
           </Routes>
           <Footer />
         </main>

@@ -1,11 +1,12 @@
 import React from "react";
+import ExerciseCards from "./ExerciseCards";
+import LandingComponent from "./LandingComponent";
 
 export default function LandingPage() {
   return (
     <div className="text-2xl grid place-items-center">
-      <h1>Welcome to BetterHealth!</h1>
-      <h1>Your favorite weight watching app!</h1>
-      <h1>Track your meals and weight here!</h1>
+      <LandingComponent />
+      <ExerciseCards />
     </div>
   );
 }

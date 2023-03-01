@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 import icon from "../heart-logo.png";
 import "../App.css";
+import HamburgerMenu from "./HamburgerMenu";
 
 const Nav = () => {
   const handleClick = () => {
@@ -14,6 +15,7 @@ const Nav = () => {
   };
   return (
     <nav className="pr-5 py-3 bg-blue shadow-xl">
+      <HamburgerMenu />
       <div className="flex items-center justify-between">
         {/* Logo */}
         <Link to="/home">
