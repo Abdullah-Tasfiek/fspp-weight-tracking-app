@@ -17,7 +17,9 @@ export default function LandingComponent() {
             weight. All in one place!
           </div>
           <div className="landingComponent_button">
-            <Button variant="contained">Join Now</Button>
+            <a href="/welcome">
+              <Button variant="contained">Join Now</Button>
+            </a>
           </div>
         </div>
         <div className="landingComponent__image">

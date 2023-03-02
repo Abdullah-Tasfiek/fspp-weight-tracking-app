@@ -6,10 +6,19 @@ export default function Community() {
     <div>
       <div className="community">
         <div className="community__image">
-          <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"></img>{" "}
+          <img src="https://cloudfront.fitnessblender.com/assets/img/homepage/community-2880.webp"></img>
         </div>
-        <div className="community__text">
-          <div>Community</div>
+        <div className="community__container">
+          <div className="community__container__header">
+            Supportive Community
+          </div>
+          <div className="community__container__body">
+            Stay motivated and engaged with a little help
+            <div>from a supportive community of other members.</div>
+          </div>
+          <div className="community__container__member">
+            <a href="/welcome">Become a Member </a>
+          </div>
         </div>
       </div>
     </div>
