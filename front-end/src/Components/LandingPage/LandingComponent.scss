@@ -1,33 +1,31 @@
 .landingComponent {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: auto;
     background-color: lightblue;
+    background-image: url('https://images.unsplash.com/photo-1588421357574-87938a86fa28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80');
     
     &__heading {
         text-align: left;
-        padding: 160px;
+        padding: 80px;  
 
         &__text {
-        color: #789c2b;
+        color: #8dce00;
         font-size: 55px;
-        margin-bottom: 20px;
 
         }
 
     }
 
     &__body__text {
-        color: black;
+        color: white;
         padding: 3px;
+        font-size: 20px;
     }
 }
 
 .landingComponent_image {
     max-width: 500px;
     margin: auto;
-    padding: 10px;
-    margin-top: 55px;
 }
 
 .landingComponent_button {

@@ -3,9 +3,9 @@ import "./ExerciseCards.scss";
 
 export default function ExerciseCards() {
   return (
-    <div>
+    <div className="ExerciseCards">
       <div className="exerciseCards__title">
-        Not sure where to start?
+        Not sure <span className="start">where to start?</span>
         <div className="exerciseCards__title__subsection">
           Here are some tips to get started!
         </div>
@@ -64,7 +64,7 @@ export default function ExerciseCards() {
             <div class="exerciseCard__details">
               <div>
                 <a href="https://www.hsph.harvard.edu/news/hsph-in-the-news/strength-training-time-benefits/#:~:text=She%20explained%20that%20muscle%2Dstrengthening,blood%20pressure%2C%E2%80%9D%20she%20said.">
-                  <span class="key">Benefits of Lifting</span>
+                  <span class="key">Benefits of Weightlifting</span>
                 </a>
               </div>
               <div>
@@ -91,7 +91,7 @@ export default function ExerciseCards() {
             <div class="exerciseCard__heading">
               <div>
                 If you are trying to gain or lose weight, tracking how many
-                calories you eat is is important. It deterimines wether you will
+                calories you eat is important. It deterimines whether you will
                 lose or gain weight.
               </div>
             </div>

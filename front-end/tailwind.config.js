@@ -12,6 +12,7 @@ module.exports = {
         lime: "#7CC26E", //buttons
         green: "#93C23B", //text
         grey: "#F5F6F8", //footer
+        blueText: "#3874CB",
       },
     },
     screens: {

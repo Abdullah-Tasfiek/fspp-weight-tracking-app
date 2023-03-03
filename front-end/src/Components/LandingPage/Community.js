@@ -5,9 +5,7 @@ export default function Community() {
   return (
     <div>
       <div className="community">
-        <div className="community__image">
-          <img src="https://cloudfront.fitnessblender.com/assets/img/homepage/community-2880.webp"></img>
-        </div>
+        <div className="community__image"></div>
         <div className="community__container">
           <div className="community__container__header">
             Supportive Community

@@ -14,23 +14,23 @@ const Nav = () => {
     nav.classList.toggle("hidden");
   };
   return (
-    <nav className="pr-5 py-3 bg-blue shadow-xl">
+    <nav className="pr-5 py-3 bg-white shadow-xl">
       {/* <HamburgerMenu /> */}
       <div className="flex items-center justify-between">
         {/* Logo */}
         <Link to="/home">
           {/* <img src={icon} className="App-logo" alt="logo" /> */}
-          <div className="font-fonts text-4xl mx-20 text-white">
+          <div className="font-fonts text-4xl mx-20 text-blueText">
             BetterHealth
           </div>
         </Link>
         {/* Navbar Routes*/}
-        <div className="hidden md:flex space-x-40 pr-30 fonts-font text-2xl text-white">
+        <div className="hidden md:flex space-x-40 pr-30 fonts-font text-2xl text-black">
           <Link className="hover:text-red-800" to="/myweight">
             <button href="/myweight">My Weight</button>
           </Link>
           <Link
-            className="hover:text-red-800 fonts-font text-2xl text-white"
+            className="hover:text-red-800 fonts-font text-2xl text-black"
             to="/myfoods"
           >
             <button href="/myfoods">My Foods</button>
