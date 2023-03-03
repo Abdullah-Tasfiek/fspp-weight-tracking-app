@@ -17,7 +17,7 @@ export default function Grid() {
             </a>
             <img
               className="grid__container__a__image"
-              src="https://media.istockphoto.com/id/1375039697/photo/healthy-fruits-and-vegetables-salad-recipe.jpg?b=1&s=170667a&w=0&k=20&c=YzWsM-BQitBf9og-RKD9AEVtnzQ79yVeso6gzSNaXF4="
+              src="https://cloudfront.fitnessblender.com/assets/img/homepage/programs-1440.webp"
             />
           </div>
           <div className="grid__container__b">
@@ -31,7 +31,7 @@ export default function Grid() {
             </a>
             <img
               className="grid__container__b__image"
-              src="https://media.istockphoto.com/id/1375039697/photo/healthy-fruits-and-vegetables-salad-recipe.jpg?b=1&s=170667a&w=0&k=20&c=YzWsM-BQitBf9og-RKD9AEVtnzQ79yVeso6gzSNaXF4="
+              src="https://cloudfront.fitnessblender.com/assets/img/homepage/workouts-1440.webp"
             />
           </div>
           <div className="grid__container__c">
@@ -44,7 +44,7 @@ export default function Grid() {
             </a>
             <img
               className="grid__container__c__image"
-              src="https://media.istockphoto.com/id/1375039697/photo/healthy-fruits-and-vegetables-salad-recipe.jpg?b=1&s=170667a&w=0&k=20&c=YzWsM-BQitBf9og-RKD9AEVtnzQ79yVeso6gzSNaXF4="
+              src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             />
           </div>
           <div className="grid__container__d">
@@ -56,10 +56,12 @@ export default function Grid() {
             <a href="" className="grid__container__d__href">
               Find a Recipe
             </a>
-            <img
-              className="grid__container__d__image"
-              src="https://media.istockphoto.com/id/1375039697/photo/healthy-fruits-and-vegetables-salad-recipe.jpg?b=1&s=170667a&w=0&k=20&c=YzWsM-BQitBf9og-RKD9AEVtnzQ79yVeso6gzSNaXF4="
-            />
+            <div className="grid__container__d__imageContainer">
+              <img
+                className="grid__container__d__image"
+                src="https://images.pexels.com/photos/406152/pexels-photo-406152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              />
+            </div>
           </div>
         </div>
       </div>

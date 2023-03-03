@@ -25,22 +25,31 @@
                 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             }
             &__image {
-                max-width: 640px;
+                max-height: 260px;
                 margin-top: 30px;
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
-                width: 50%;
+                border-radius: 5px;
             }
         }
         &__b {
-            background-color: #F3F2F7;
+            background-color: #F1F4F7;
+            &__image {
+                max-height: 325px;
+            }
         }
         &__c {
-            background-color: #D8D9DA;
+            background-color: #FAFCFD;
+            &__image {
+                max-height: 325px;
+            }
         }
         &__d {
-            background-color: #3874CB;
+            background-color: #E4F7FE;
+            &__image {
+                max-height: 325px;
+            }
         }
     }
 }
