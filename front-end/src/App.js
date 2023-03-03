@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Nav from "./Components/NavBar";
+import Nav from "./Components/NavBar/NavBar";
 import Home from "./PagesMyFood/Home";
 import FourOFour from "./PagesMyFood/FourOFour";
 import Index from "./PagesMyFood/Index";
@@ -10,7 +10,7 @@ import WeightIndex from "./PagesMyWeight/Index";
 import NewLog from "./PagesMyWeight/New";
 import EditLog from "./PagesMyWeight/Edit";
 import ShowLog from "./PagesMyWeight/Show";
-import LandingPage from "./Components/LandingPage/LandingPage";
+import LandingPage from "./Pages/LandingPage/LandingPage";
 import Footer from "./Components/Footer";
 import Welcome from "./Components_Onboarding/Welcome";
 import AboutYou from "./Components_Onboarding/AboutYou";
