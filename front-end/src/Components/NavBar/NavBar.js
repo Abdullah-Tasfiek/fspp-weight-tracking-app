@@ -3,7 +3,7 @@ import "./NavBar.scss";
 import { useState, useEffect } from "react";
 
 const Nav = () => {
-  const [textColor, setTextColor] = useState("white");
+  const [textColor, setTextColor] = useState("#2A64E5");
   const [backgroundColor, setBackgroundColor] = useState("white");
 
   useEffect(() => {
