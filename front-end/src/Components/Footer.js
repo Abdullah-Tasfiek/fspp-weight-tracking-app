@@ -1,16 +1,14 @@
 import React from "react";
-import "../App.css";
+import "./Footer.scss";
+
 export default function Footer() {
   return (
-    <footer className="footer bg-grey">
-      <span className="fonts-font text-sm sm:text-center">
-        Copyright © 2023{" "}
-        <a className="hover:underline" href="/">
-          BetterHealth™
-        </a>
-        . All Rights Reserved.
+    <footer className="footer">
+      <span className="">
+        © 2023 <a href="/" className="underline">BetterHealth</a>™. All Rights
+        Reserved.
       </span>
-      <ul className="flex flex-wrap items-center"></ul>
+      <ul className=""></ul>
     </footer>
   );
 }

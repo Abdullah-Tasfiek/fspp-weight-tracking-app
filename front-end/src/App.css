@@ -1,5 +1,4 @@
 .App-logo {
-  height: 10vmin;
   pointer-events: none;
 }
 
@@ -15,12 +14,4 @@ div.copyright {
   margin-top:41vh;
 }
 
-.footer{
-  display: grid;
-  grid-template-columns: 1;
-  justify-content:center;
-  margin-top:182vh;
-  max-height: 100px;
-  padding: 20px;
-}
 

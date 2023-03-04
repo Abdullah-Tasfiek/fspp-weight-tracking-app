@@ -1,12 +1,14 @@
 .grid {
     &__container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        // grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 710px));
         grid-row: 2;
         margin-bottom: 10px;
         &__a, &__b, &__c, &__d {
             background-color: #F1E7F5;
             height: 550px;
+
             text-align: center;
             margin: 0.4rem;
             &__title {

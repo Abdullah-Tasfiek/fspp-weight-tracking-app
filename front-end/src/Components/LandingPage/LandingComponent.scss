@@ -1,12 +1,15 @@
 .landingComponent {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    // grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     background-color: lightblue;
     background-image: url('https://images.unsplash.com/photo-1588421357574-87938a86fa28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80');
     
     &__heading {
-        text-align: left;
-        padding: 80px;  
+        text-align: center;
+        // margin-top: 160px;
+        padding: 100px;
 
         &__text {
         color: #8dce00;
@@ -24,8 +27,9 @@
 }
 
 .landingComponent_image {
-    max-width: 500px;
-    margin: auto;
+    object-fit: cover;
+    max-width:100%;
+    width:100%;
 }
 
 .landingComponent_button {
