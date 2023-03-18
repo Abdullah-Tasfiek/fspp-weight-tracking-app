@@ -8,7 +8,7 @@ const Nav = () => {
 
   useEffect(() => {
     function handleScroll() {
-      if (window.scrollY < 881) {
+      if (window.scrollY < 600) {
         setTextColor("#2A64E5");
         setBackgroundColor("white");
       } else {

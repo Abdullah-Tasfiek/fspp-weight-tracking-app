@@ -4,11 +4,43 @@
     position: 100vh;
     width: 100%;
     padding: 20px; 
+    height: 550px;
+
+    &__columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 355px));
+
+      &__column1 {
+        color: #9395A5;
+        font-size: 40px;
+        font-family: noto;
+        padding: 60px;
+        margin-left: 30px;
+      }
+
+      &__column2 {
+        color: white;
+        padding: 100px;
+      }
+    }
+
+    &__footerEnd {
+      color: #9395A5;
+      padding: 90px;
+      position: 100vh;
+
+      &__border {
+        border-top: solid 0.1px #9395A5;
+      }
+
+      &__copyright {
+        margin-top: 30px;
+      }
+    }
   }
 
 body {
     margin: 0;
     min-height: 100vh;
     display: grid;
-    grid-template-rows: auto 1fr auto;
 }
