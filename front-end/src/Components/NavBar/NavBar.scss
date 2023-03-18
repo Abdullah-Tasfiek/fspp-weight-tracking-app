@@ -14,7 +14,7 @@
             display: grid;
             cursor: pointer;
             margin-left: auto;
-            margin-right: 20px;
+            margin-right: 40px;
         }
 
         &__logo {
@@ -43,9 +43,39 @@
 }
 
 .menu {
-    max-width: 20%;
+    max-width: 50vw;
     height: 100vh;
     margin-left: auto;
     background-color: #222430;
-    padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: inherit;
+}
+
+/** animations */
+
+.burger-bar.clicked:nth-child(1) {
+    transform: rotate(45deg) translate(1em, 1.25em);
+    transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(2) {
+    transform: scale(0.1);
+    transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3) {
+    transform: rotate(135deg) translate(-0.6em, 1em);
+    transition: ease-out 0.5s;
+}
+
+/** unclicked */
+.burger-bar.unclicked {
+    transform: rotate(0) translate(0);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
 }

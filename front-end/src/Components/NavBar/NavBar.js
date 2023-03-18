@@ -3,8 +3,8 @@ import "./NavBar.scss";
 import { useState, useEffect } from "react";
 
 const Nav = () => {
-  const [textColor, setTextColor] = useState("#2A64E5");
-  const [backgroundColor, setBackgroundColor] = useState("white");
+  const [textColor, setTextColor] = useState("white");
+  const [backgroundColor, setBackgroundColor] = useState("#222430");
 
   //to change burger classes
   const [burgerClass, setBurgerClass] = useState("burger-bar unclicked")
@@ -58,7 +58,7 @@ const Nav = () => {
         {/* Navbar BurgerMenu*/}
 
         <div className="navbar__container__burgerMenu" onClick={updateMenu}>
-          <div className={burgerClass}></div>
+          <div className={burgerClass}><a></a></div>
           <div className={burgerClass}></div>
           <div className={burgerClass}></div>
         </div>
