@@ -4,11 +4,12 @@
     position: 100vh;
     width: 100%;
     padding: 20px; 
-    height: 550px;
+    height: 80vh;
 
     &__columns {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 355px));
+      grid-template-columns: repeat(auto-fit, minmax(230px, 600px));
+      grid-row: 2;
 
       &__column1 {
         color: #9395A5;
@@ -19,8 +20,12 @@
       }
 
       &__column2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         color: white;
-        padding: 100px;
+        padding: 80px;
+        gap: 20px;
+        margin-left: 10px;
       }
     }
 
@@ -28,6 +33,9 @@
       color: #9395A5;
       padding: 90px;
       position: 100vh;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100, 300px));
+
 
       &__border {
         border-top: solid 0.1px #9395A5;
