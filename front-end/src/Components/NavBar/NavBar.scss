@@ -5,7 +5,17 @@
     
     &__container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+
+        &__burgerMenu {
+            height: 100%;
+            max-width: 60px;
+            padding-top: 15px;
+            display: grid;
+            cursor: pointer;
+            margin-left: auto;
+            margin-right: 20px;
+        }
 
         &__logo {
             color: #2A64E5;
@@ -24,3 +34,18 @@
         }
     }
 } 
+
+.burger-bar {
+    width: 60px;
+    height: 0.3em;
+    background-color: white;
+    border-radius: 0.5em;
+}
+
+.menu {
+    max-width: 20%;
+    height: 100vh;
+    margin-left: auto;
+    background-color: #222430;
+    padding: 0;
+}
