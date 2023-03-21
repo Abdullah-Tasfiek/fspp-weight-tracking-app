@@ -1,5 +1,5 @@
 .navbar {
-    background-color: white;
+    background-color:#222430;
     position: sticky; top: 0;
     z-index:1;
     
@@ -18,7 +18,7 @@
         }
 
         &__logo {
-            color: #2A64E5;
+            color: white;
             font-size: 40px;
             font-family: noto;
             padding: 10px;
@@ -32,6 +32,10 @@
             padding: 26px;
             text-align: right;
         }
+    }
+
+    &__menu {
+        color: white;
     }
 } 
 

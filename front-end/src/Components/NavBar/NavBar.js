@@ -3,79 +3,77 @@ import "./NavBar.scss";
 import { useState, useEffect } from "react";
 
 const Nav = () => {
-  const [textColor, setTextColor] = useState("white");
-  const [backgroundColor, setBackgroundColor] = useState("#222430");
+  // const [textColor, setTextColor] = useState("white");
+  // const [backgroundColor, setBackgroundColor] = useState("#222430");
 
   //to change burger classes
-  const [burgerClass, setBurgerClass] = useState("burger-bar unclicked")
-  const [menuClass, setMenuClass] = useState("menu hidden")
-  const [isMenuClicked, setisMenuClicked] = useState(false)
+  const [burgerClass, setBurgerClass] = useState("burger-bar unclicked");
+  const [menuClass, setMenuClass] = useState("menu hidden");
+  const [isMenuClicked, setisMenuClicked] = useState(false);
 
-  useEffect(() => {
-    function handleScroll() {
-      if (window.scrollY < 600) {
-        setTextColor("white");
-        setBackgroundColor("#222430");
-      } else {
-        setTextColor("white");
-        setBackgroundColor("#222430");
-      }
-    }
+  // useEffect(() => {
+  //   function handleScroll() {
+  //     if (window.scrollY < 600) {
+  //       setTextColor("white");
+  //       setBackgroundColor("#222430");
+  //     } else {
+  //       setTextColor("white");
+  //       setBackgroundColor("#222430");
+  //     }
+  //   }
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
-  const style = {
-    color: textColor,
-  };
+  // const style = {
+  //   color: textColor,
+  // };
 
-  const background = {
-    backgroundColor: backgroundColor,
-  };
+  // const background = {
+  //   backgroundColor: backgroundColor,
+  // };
 
   const updateMenu = () => {
     if (!isMenuClicked) {
-      setBurgerClass("burger-bar clicked")
-      setMenuClass("menu visible")
+      setBurgerClass("burger-bar clicked");
+      setMenuClass("menu visible");
     } else {
-      setBurgerClass("burger-bar unclicked")
-      setMenuClass("menu hidden")
+      setBurgerClass("burger-bar unclicked");
+      setMenuClass("menu hidden");
     }
 
-    setisMenuClicked(!isMenuClicked)
-  }
+    setisMenuClicked(!isMenuClicked);
+  };
+
   return (
-    <nav className="navbar" style={background}>
+    <nav className="navbar">
       <div className="navbar__container">
         {/* Logo */}
-        <div style={style} className="navbar__container__logo">
+        <div className="navbar__container__logo">
           <a href="/home">BetterHealth</a>
         </div>
         {/* Navbar BurgerMenu*/}
-
         <div className="navbar__container__burgerMenu" onClick={updateMenu}>
-          <div className={burgerClass}><a></a></div>
+          <div className={burgerClass}></div>
           <div className={burgerClass}></div>
           <div className={burgerClass}></div>
         </div>
-
-        {/* <div className="navbar__container__routes">
-          <div style={style}>
-            <a href="/myweight">My Weight</a>
-          </div>
-        </div>
-        <div className="navbar__container__routes">
-          <div style={style}>
-            <a href="/myfoods">My Foods</a>
-          </div>
-        </div> */}
       </div>
 
-      <div className={menuClass}></div>
+      <div className={menuClass}>
+        <div className="navbar__menu">
+          <div>
+            <a href="/myweight">My Weight</a>
+          </div>
+          <div>
+            <a href="/myfoods">My Foods</a>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 };
