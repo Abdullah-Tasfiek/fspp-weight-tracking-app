@@ -65,23 +65,40 @@ const Nav = () => {
       </div>
       <div className={menuClass}>
         <div className="navbar__menu">
-          <div>
-            <a href="/">Home</a>
+          <div className="navbar__menu__item">
+            <a href="/">
+              <img src={require("../../Assets/home.png")} align="left"></img>Home
+            </a>
           </div>
-          <div>
-            <a href="/welcome">Welcome</a>
+          <div className="navbar__menu__item">
+            <a href="/welcome">
+              <img src={require("../../Assets/exam.png")} align="left"/>
+              Welcome
+            </a>
           </div>
-          <div>
-            <a href="/myweight">Weigh In</a>
+          <div className="navbar__menu__item">
+            <a href="/myweight">
+              <img src={require("../../Assets/weighing-scale (3).png")} align="left"/>
+              Weigh In
+            </a>
           </div>
-          <div>
-            <a href="/myweight/logs">Weight Logs</a>
+          <div className="navbar__menu__item">
+            <a href="/myweight/logs">
+              <img src={require("../../Assets/list (1).png")} align="left"/>
+              Weight Logs
+            </a>
           </div>
-          <div>
-            <a href="/myfoods">Track Foods</a>
+          <div className="navbar__menu__item">
+            <a href="/myfoods">
+              <img src={require("../../Assets/calculator.png")} align="left"/>
+              Track Foods
+            </a>
           </div>
-          <div>
-            <a href="/myfoods/logs">Food Logs</a>
+          <div className="navbar__menu__item">
+            <a href="/myfoods/new">
+              <img src={require("../../Assets/restaurant.png")} align="left"/>
+              Add Food
+            </a>
           </div>
         </div>
       </div>
