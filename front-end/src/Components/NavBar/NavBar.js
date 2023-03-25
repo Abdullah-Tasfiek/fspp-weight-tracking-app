@@ -63,14 +63,25 @@ const Nav = () => {
           <div className={burgerClass}></div>
         </div>
       </div>
-
       <div className={menuClass}>
         <div className="navbar__menu">
           <div>
-            <a href="/myweight">My Weight</a>
+            <a href="/">Home</a>
           </div>
           <div>
-            <a href="/myfoods">My Foods</a>
+            <a href="/welcome">Welcome</a>
+          </div>
+          <div>
+            <a href="/myweight">Weigh In</a>
+          </div>
+          <div>
+            <a href="/myweight/logs">Weight Logs</a>
+          </div>
+          <div>
+            <a href="/myfoods">Track Foods</a>
+          </div>
+          <div>
+            <a href="/myfoods/logs">Food Logs</a>
           </div>
         </div>
       </div>
