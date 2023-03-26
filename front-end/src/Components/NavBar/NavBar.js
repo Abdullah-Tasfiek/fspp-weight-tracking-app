@@ -3,39 +3,11 @@ import "./NavBar.scss";
 import { useState, useEffect } from "react";
 
 const Nav = () => {
-  // const [textColor, setTextColor] = useState("white");
-  // const [backgroundColor, setBackgroundColor] = useState("#222430");
 
   //to change burger classes
   const [burgerClass, setBurgerClass] = useState("burger-bar unclicked");
   const [menuClass, setMenuClass] = useState("menu hidden");
   const [isMenuClicked, setisMenuClicked] = useState(false);
-
-  // useEffect(() => {
-  //   function handleScroll() {
-  //     if (window.scrollY < 600) {
-  //       setTextColor("white");
-  //       setBackgroundColor("#222430");
-  //     } else {
-  //       setTextColor("white");
-  //       setBackgroundColor("#222430");
-  //     }
-  //   }
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
-  // const style = {
-  //   color: textColor,
-  // };
-
-  // const background = {
-  //   backgroundColor: backgroundColor,
-  // };
 
   const updateMenu = () => {
     if (!isMenuClicked) {

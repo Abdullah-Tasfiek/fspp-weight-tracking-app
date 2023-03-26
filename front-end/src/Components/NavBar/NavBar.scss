@@ -39,7 +39,7 @@
         display: grid;
         // grid-template-columns: repeat(6, 100px);
         justify-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
         margin-top: 10px;
 
         &__item {
