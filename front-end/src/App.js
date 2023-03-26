@@ -11,13 +11,14 @@ import NewLog from "./PagesMyWeight/New";
 import EditLog from "./PagesMyWeight/Edit";
 import ShowLog from "./PagesMyWeight/Show";
 import LandingPage from "./Pages/LandingPage/LandingPage";
-import Welcome from "./Onboarding/Welcome";
-import AboutYou from "./Onboarding/AboutYou";
-import GoalWeight from "./Onboarding/GoalWeight";
 import FooterPage from "./Pages/Footer/FooterPage";
 import OnboardingPage1 from "./Pages/OnboardingPage1/OnboardingPage1";
 import OnboardingPage2 from "./Pages/OnbardingPage2/OnboardingPage2";
 import OnboardingPage3 from "./Pages/OnboardingPage3/OnboardingPage3";
+import OnboardingPage4 from "./Pages/OnboardingPage4/OnboardingPage4";
+import OnboardingPage5 from "./Pages/OnboardingPage5/OnboardingPage5";
+import OnboardingPage6 from "./Pages/OnboardingPage6/OnboardingPage6";
+import OnboardingPage7 from "./Pages/OnboardingPage7/OnboardingPage7";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -30,7 +31,23 @@ function App() {
           <Routes>
             <Route path="/welcome" element={<OnboardingPage1 />} />
             <Route path="/welcome/about-you" element={<OnboardingPage2 />} />
-            <Route path="/welcome/target-weight" element={<OnboardingPage3 />} />
+            <Route
+              path="/welcome/target-weight"
+              element={<OnboardingPage3 />}
+            />
+            <Route
+              path="/welcome/activity-level"
+              element={<OnboardingPage4 />}
+            />
+            <Route
+              path="/welcome/energy-target"
+              element={<OnboardingPage5 />}
+            />
+            <Route
+              path="/welcome/exercise-target"
+              element={<OnboardingPage6 />}
+            />
+            <Route path="/welcome/completed" element={<OnboardingPage7 />} />
             <Route path="/home" element={<Home />} />
             <Route path="/myfoods" element={<Index />} />
             <Route path="/myweight/logs" element={<WeightIndex />} />

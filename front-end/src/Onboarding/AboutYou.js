@@ -12,9 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import OutlinedInput from "@mui/material/OutlinedInput";
-import FormHelperText from "@mui/material/FormHelperText";
 import InputAdornment from "@mui/material/InputAdornment";
-import Button from "@mui/material/Button";
 
 export default function AboutYou() {
   const [value, setValue] = React.useState(dayjs("2023-01-26"));
@@ -43,47 +41,53 @@ export default function AboutYou() {
     setPounds(event.target.value);
   };
 
-  //   const validateWeight = (input) => {
-  //     if ()
-  //   }
-
   return (
     <div className="onboarding">
       <div className="onboarding__progress">
         <div className="onboarding__progress1">
           <div className="flex justify-center">
-            <img
-              src={require("../Assets/number-one (1).png")}
-              className="flex justify-center"
-            />
+            <Link to="/welcome/about-you">
+              <img
+                src={require("../Assets/number-one (1).png")}
+                className="flex justify-center"
+              />
+            </Link>
           </div>
           About You
         </div>
         <hr class="w-14 h-0.5 my-4 bg-gray-400" />
         <div className="onboarding__progress2">
           <div className="flex justify-center">
-            <img src={require("../Assets/number-2.png")} />
+            <Link to="/welcome/target-weight">
+              <img src={require("../Assets/number-2.png")} />
+            </Link>
           </div>
           Goal Weight
         </div>
         <hr class="w-14 h-0.5 my-4 bg-gray-400" />
         <div className="onboarding__progress3">
           <div className="flex justify-center">
-            <img src={require("../Assets/number-3.png")} />
+            <Link to="/welcome/activity-level">
+              <img src={require("../Assets/number-3.png")} />
+            </Link>
           </div>
           Activity Level
         </div>
         <hr class="w-14 h-0.5 my-4 bg-gray-400" />
         <div className="onboarding__progress4">
           <div className="flex justify-center">
-            <img src={require("../Assets/number-four.png")} />
+            <Link to="/welcome/energy-target">
+              <img src={require("../Assets/number-four.png")} />
+            </Link>
           </div>
           Energy Target
         </div>
         <hr class="w-14 h-0.5 my-4 bg-gray-400" />
         <div className="onboarding__progress5">
           <div className="flex justify-center">
-            <img src={require("../Assets/number-5.png")} />
+            <Link to="/welcome/exercise-target">
+              <img src={require("../Assets/number-5.png")} />
+            </Link>
           </div>
           Exercise Target
         </div>

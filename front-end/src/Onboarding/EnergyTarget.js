@@ -1,10 +1,10 @@
 import React from "react";
-import "./GoalWeight.scss";
+import "./EnergyTarget.scss";
 import { Link } from "react-router-dom";
 import Switch from "@mui/material/Switch";
 import FormControlLabel from "@mui/material/FormControlLabel";
 
-export default function GoalWeight() {
+export default function EnergyTarget() {
   return (
     <div className="onboarding">
       <div className="onboarding__progress">
@@ -23,7 +23,7 @@ export default function GoalWeight() {
         <div className="onboarding__progress2">
           <div className="flex justify-center">
             <Link to="/welcome/target-weight">
-              <img src={require("../Assets/number-2 (1).png")} />
+              <img src={require("../Assets/number-2.png")} />
             </Link>
           </div>
           Goal Weight
@@ -41,7 +41,7 @@ export default function GoalWeight() {
         <div className="onboarding__progress4">
           <div className="flex justify-center">
             <Link to="/welcome/energy-target">
-              <img src={require("../Assets/number-four.png")} />
+              <img src={require("../Assets/number-four (1).png")} />
             </Link>
           </div>
           Energy Target
@@ -57,17 +57,11 @@ export default function GoalWeight() {
         </div>
       </div>
       <form>
-        <div className="onboarding__heading">
-          How much would you like to weigh?
-        </div>
+        <div className="onboarding__heading">Daily Energy</div>
         <div className="onboarding__about">
           <div>
-            A healthy BMI for an adult is between lowerRange and upperRange
-          </div>
-          <br></br>
-          <div>
-            Your current BMI is currentBmi. This means your healthy range is
-            between lowerWeight lb and upperWeight lb.
+            Based on what you've told us, we recommended a target range of 1850
+            cal to 2050 cal.
           </div>
           <br></br>
           <div className="onboarding__about__switch">
@@ -85,11 +79,11 @@ export default function GoalWeight() {
         </div>
         <div className="onboarding__footer">
           <div className="onboarding__footer__navigation">
-            <Link to="/welcome/about-you">
+            <Link to="/welcome/activity-level">
               <img src={require("../Assets/back.png")} align="left"></img>
               <span className="onboarding__footer__navigation__back">Back</span>
             </Link>
-            <Link to="/welcome/activity-level">
+            <Link to="/welcome/exercise-target">
               <img src={require("../Assets/next.png")} align="right"></img>
               <span className="onboarding__footer__navigation__next">Next</span>
             </Link>

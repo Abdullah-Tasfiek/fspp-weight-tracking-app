@@ -1,10 +1,19 @@
 import React from "react";
-import "./GoalWeight.scss";
 import { Link } from "react-router-dom";
-import Switch from "@mui/material/Switch";
-import FormControlLabel from "@mui/material/FormControlLabel";
+import "../Onboarding/ExerciseTarget.scss";
+import { useState } from "react";
+import Box from "@mui/material/Box";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 
-export default function GoalWeight() {
+export default function ExerciseTarget() {
+  const [exerciseTarget, setExerciseTarget] = useState("");
+
+  const handleExerciseTargetChange = (event) => {
+    setExerciseTarget(event.target.value);
+  };
   return (
     <div className="onboarding">
       <div className="onboarding__progress">
@@ -23,7 +32,7 @@ export default function GoalWeight() {
         <div className="onboarding__progress2">
           <div className="flex justify-center">
             <Link to="/welcome/target-weight">
-              <img src={require("../Assets/number-2 (1).png")} />
+              <img src={require("../Assets/number-2.png")} />
             </Link>
           </div>
           Goal Weight
@@ -49,47 +58,47 @@ export default function GoalWeight() {
         <hr class="w-14 h-0.5 my-4 bg-gray-400" />
         <div className="onboarding__progress5">
           <div className="flex justify-center">
-            <Link to="/welcome/exercise-target">
-              <img src={require("../Assets/number-5.png")} />
-            </Link>
+            <img src={require("../Assets/number-5 (1).png")} />
           </div>
           Exercise Target
         </div>
       </div>
       <form>
-        <div className="onboarding__heading">
-          How much would you like to weigh?
-        </div>
+        <div className="onboarding__heading">Get out there!</div>
         <div className="onboarding__about">
-          <div>
-            A healthy BMI for an adult is between lowerRange and upperRange
-          </div>
+          <div>You should aim to do a little exercise every day.</div>
           <br></br>
           <div>
-            Your current BMI is currentBmi. This means your healthy range is
-            between lowerWeight lb and upperWeight lb.
+            <Box sx={{ minWidth: 120 }}>
+              <FormControl className="w-60">
+                <InputLabel id="demo-simple-select-label">
+                  Exercise Target
+                </InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={exerciseTarget}
+                  label="Light"
+                  onChange={handleExerciseTargetChange}
+                >
+                  <MenuItem value={1}>10 mins</MenuItem>
+                  <MenuItem value={2}>20 mins</MenuItem>
+                  <MenuItem value={3}>30 mins</MenuItem>
+                  <MenuItem value={4}>40 mins</MenuItem>
+                  <MenuItem value={5}>50 mins</MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
           </div>
           <br></br>
-          <div className="onboarding__about__switch">
-            <FormControlLabel
-              value="end"
-              control={<Switch defaultChecked color="warning" />}
-              label="Use recommendation"
-              labelPlacement="end"
-            />
-          </div>
-          <br></br>
-          <div>
-            To get you started, we've set an intermediate goal weightNumber
-          </div>
         </div>
         <div className="onboarding__footer">
           <div className="onboarding__footer__navigation">
-            <Link to="/welcome/about-you">
+            <Link to="/welcome/energy-target">
               <img src={require("../Assets/back.png")} align="left"></img>
               <span className="onboarding__footer__navigation__back">Back</span>
             </Link>
-            <Link to="/welcome/activity-level">
+            <Link to="/welcome/completed">
               <img src={require("../Assets/next.png")} align="right"></img>
               <span className="onboarding__footer__navigation__next">Next</span>
             </Link>
