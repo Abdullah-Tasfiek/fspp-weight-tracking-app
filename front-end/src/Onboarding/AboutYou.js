@@ -14,6 +14,7 @@ import Select from "@mui/material/Select";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import FormHelperText from "@mui/material/FormHelperText";
 import InputAdornment from "@mui/material/InputAdornment";
+import Button from "@mui/material/Button";
 
 export default function AboutYou() {
   const [value, setValue] = React.useState(dayjs("2023-01-26"));
@@ -195,16 +196,14 @@ export default function AboutYou() {
           /> */}
         </div>
         <div className="onboarding__footer">
-          <div>
-            <img src={require("../Assets/back.png")}></img>
+          <div className="onboarding__footer__navigation">
             <Link to="/welcome">
-              <div className="text-left">Back</div>
+              <img src={require("../Assets/back.png")} align="left"></img>
+              <span className="onboarding__footer__navigation__back">Back</span>
             </Link>
-          </div>
-          <div className="right-10">
             <Link to="/welcome/target-weight">
-              <img src={require("../Assets/next.png")}></img>
-              <input type="submit" className="appearance-none" value="Next" />
+              <img src={require("../Assets/next.png")} align="right"></img>
+              <span className="onboarding__footer__navigation__next">Next</span>
             </Link>
           </div>
         </div>

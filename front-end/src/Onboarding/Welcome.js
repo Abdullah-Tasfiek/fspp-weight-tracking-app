@@ -1,5 +1,6 @@
 import React from "react";
 import "./Welcome.scss";
+import Button from "@mui/material/Button";
 
 export default function Welcome() {
   return (
@@ -23,7 +24,7 @@ export default function Welcome() {
       </div>
       <div className="landingCard__footer">
         <a href="/welcome/about-you">
-          <button className="shadow-xl">GET STARTED</button>
+          <Button variant="contained">GET STARTED</Button>
         </a>
       </div>
     </div>

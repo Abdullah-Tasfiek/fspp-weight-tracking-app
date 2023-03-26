@@ -5,6 +5,7 @@
     width: 95%;
     padding: 10px;
     margin-top: 2em;
+    margin-bottom: 2em;
     
     &__progress {
     margin: auto;
@@ -87,14 +88,28 @@
     
     &__footer {
         border-top: 0.5px solid grey;
-        text-align: right;
         padding-top: 15px;
         padding-bottom: 5px;
+
+        &__navigation { 
+
+          &__back {
+            font-weight: bold;
+            padding: 10px;
+            font-size: large;
+          }
+          &__next{
+            float: right;
+            font-weight: bold;
+            padding-right: 10px;
+            font-size: large;
+            color: #3A63DD;
+          }
+        }
       
       button{
         background-color: #3A63DD;
         color: white;
-        padding: 10px 5px;
         font-size: 14px;
       }
     }

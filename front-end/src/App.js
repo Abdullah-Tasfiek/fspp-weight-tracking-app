@@ -11,9 +11,13 @@ import NewLog from "./PagesMyWeight/New";
 import EditLog from "./PagesMyWeight/Edit";
 import ShowLog from "./PagesMyWeight/Show";
 import LandingPage from "./Pages/LandingPage/LandingPage";
-import Welcome from "./Components_Onboarding/Welcome";
-import AboutYou from "./Components_Onboarding/AboutYou";
-import GoalWeight from "./Components_Onboarding/GoalWeight";
+import Welcome from "./Onboarding/Welcome";
+import AboutYou from "./Onboarding/AboutYou";
+import GoalWeight from "./Onboarding/GoalWeight";
+import FooterPage from "./Pages/Footer/FooterPage";
+import OnboardingPage1 from "./Pages/OnboardingPage1/OnboardingPage1";
+import OnboardingPage2 from "./Pages/OnbardingPage2/OnboardingPage2";
+import OnboardingPage3 from "./Pages/OnboardingPage3/OnboardingPage3";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -24,9 +28,9 @@ function App() {
         <Nav />
         <main>
           <Routes>
-            <Route path="/welcome" element={<Welcome />} />
-            <Route path="/welcome/about-you" element={<AboutYou />} />
-            <Route path="/welcome/target-weight" element={<GoalWeight />} />
+            <Route path="/welcome" element={<OnboardingPage1 />} />
+            <Route path="/welcome/about-you" element={<OnboardingPage2 />} />
+            <Route path="/welcome/target-weight" element={<OnboardingPage3 />} />
             <Route path="/home" element={<Home />} />
             <Route path="/myfoods" element={<Index />} />
             <Route path="/myweight/logs" element={<WeightIndex />} />
@@ -39,8 +43,8 @@ function App() {
             <Route path="*" element={<FourOFour />} />
             <Route path="/" element={<LandingPage />} />
           </Routes>
-          {/* <Footer /> */}
         </main>
+        <FooterPage />
       </Router>
     </div>
   );
