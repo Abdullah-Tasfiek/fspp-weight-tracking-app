@@ -41,6 +41,7 @@
         justify-items: center;
         grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
         margin-top: 10px;
+        transition:all 3s ease-in;
 
         &__item {
             margin-top: 8px;
@@ -63,6 +64,7 @@
     min-height: 10vh;
     text-align: center;
     font-size: small;
+   
 }
 
 .hidden {
@@ -72,6 +74,10 @@
 .visible {
     display: inherit;
 }
+.hidden.clicked:nth-child(1) {
+    transition:all 3s ease-in-out;
+}
+
 
 /** animations */
 

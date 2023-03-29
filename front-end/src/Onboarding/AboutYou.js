@@ -41,6 +41,10 @@ export default function AboutYou() {
     setPounds(event.target.value);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="onboarding">
       <div className="onboarding__progress">
@@ -201,11 +205,11 @@ export default function AboutYou() {
         </div>
         <div className="onboarding__footer">
           <div className="onboarding__footer__navigation">
-            <Link to="/welcome">
+            <Link to="/welcome" onClick={scrollToTop}>
               <img src={require("../Assets/back.png")} align="left"></img>
               <span className="onboarding__footer__navigation__back">Back</span>
             </Link>
-            <Link to="/welcome/target-weight">
+            <Link to="/welcome/target-weight" onClick={scrollToTop}>
               <img src={require("../Assets/next.png")} align="right"></img>
               <span className="onboarding__footer__navigation__next">Next</span>
             </Link>
