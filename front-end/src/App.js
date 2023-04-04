@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "./Components/NavBar/NavBar";
-import Home from "./PagesMyFood/Home";
+import Home from "./Pages/Dashboard/Home";
 import FourOFour from "./PagesMyFood/FourOFour";
 import Index from "./PagesMyFood/Index";
 import Show from "./PagesMyFood/Show";

@@ -2,10 +2,12 @@
     background-color:#222430;
     position: sticky; top: 0;
     z-index:1;
+    box-shadow: 1px 1px 5px 5px rgba(0.1,0.1,0.1,0.1);
     
     &__container {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        box-shadow: 1px 1px 5px 5px rgba(0.1,0.1,0.1,0.1);
 
         &__burgerMenu {
             height: 100%;

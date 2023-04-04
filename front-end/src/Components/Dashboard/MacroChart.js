@@ -1,4 +1,3 @@
-import "../index.css";
 import React from "react";
 import { PieChart, Pie, Legend, Tooltip } from "recharts";
 

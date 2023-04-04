@@ -1,0 +1,36 @@
+.calculateWeights {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    
+    &__container {
+        background-color: #F5F6F8;
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: 100px 220px;
+        box-shadow: 1px 1px 5px 5px rgba(0.1,0.1,0.1,0.1);
+
+        &__column1 {
+            max-width: 50px;
+            margin-left: 20px;
+            &__image {
+                margin-top: 10px;
+            }
+        }
+
+        &__column2 {
+            &__text {
+                padding: 20px;
+                text-align: left;
+            }
+        }
+    }
+}
+
+.color1 {
+color: #E58280
+}
+
+.color2 {
+color: #A3C7F6;
+}
