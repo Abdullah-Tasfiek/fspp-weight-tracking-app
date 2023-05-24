@@ -1,4 +1,4 @@
-# Weight Tracking App
+# BetterHealth - Weight Tracking App
 
 This is the only weight tracking app you'll ever need!
 
