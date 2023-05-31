@@ -1,12 +1,13 @@
 import React from "react";
 import "./NavBar.scss";
-import { useState } from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
-const Nav = () => {
+const Navigation = () => {
   return (
-    <nav className="navbar navbar-dark navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-expand-xl">
-      <div className="container-fluid">
-        {/* Logo */}
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Container>
         <div className="navbar__container__logo">
           <a className="navbar-brand text-white" href="/">
             <img
@@ -18,51 +19,20 @@ const Nav = () => {
             />{" "}
             <span className="text-4xl">BetterHealth</span>
           </a>
-          <span className="text-right">
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#toggleMobileMenu"
-              aria-controls="toggleMobileMenu"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-          </span>
         </div>
-      </div>
-      <div className="collapse navbar-collapse" id="toggleMobileMenu">
-        <ul className="navbar-nav text-center">
-          <li className="nav-item">
-            <a
-              className="nav-link text-white"
-              aria-current="page"
-              href="/welcome"
-            >
-              Welcome
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link text-white" href="/home">
-              Dashboard
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link text-white" href="/myweight">
-              Weight
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link text-white" href="/myfoods">
-              Food
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto"></Nav>
+          <Nav className="text-center">
+            <Nav.Link href="/welcome">Welcome</Nav.Link>
+            <Nav.Link href="/home">Dashboard</Nav.Link>
+            <Nav.Link href="/myweight">Weight</Nav.Link>
+            <Nav.Link href="/myfoods">Food</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
-export default Nav;
+export default Navigation;

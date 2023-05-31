@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Nav from "./Components/NavBar/NavBar";
+import Navigation from "./Components/NavBar/NavBar";
 import Home from "./Pages/Dashboard/Home";
 import FourOFour from "./PagesMyFood/FourOFour";
 import Index from "./PagesMyFood/Index";
@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Nav />
+        <Navigation />
         <main>
           <Routes>
             <Route path="/welcome" element={<OnboardingPage1 />} />
