@@ -16,7 +16,7 @@ export default function LandingComponent() {
             your fitness goals. We help you log your meals, calories, and
             weight. All in one place!
           </div>
-          <div className="landingComponent_button">
+          <div className="landingComponent__button">
             <a href="/welcome">
               <Button variant="contained">Join Now</Button>
             </a>
@@ -24,7 +24,7 @@ export default function LandingComponent() {
         </div>
         <div className="landingComponent__image">
           <img
-            className="landingComponent_image"
+            className="landingComponent__image"
             alt="people"
             src="https://cloudfront.fitnessblender.com/assets/img/homepage/team-2023-1440.webp"
           ></img>

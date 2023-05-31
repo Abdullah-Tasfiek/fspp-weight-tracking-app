@@ -8,13 +8,11 @@
     
     &__heading {
         text-align: center;
-        // margin-top: 160px;
         padding: 100px;
 
         &__text {
         color: #8dce00;
         font-size: 55px;
-
         }
 
     }
@@ -26,13 +24,13 @@
     }
 }
 
-.landingComponent_image {
+.landingComponent__image {
     object-fit: cover;
     max-width:600px;
     width:100%;
 }
 
-.landingComponent_button {
+.landingComponent__button {
     margin-top: 10px;
     padding: 5px;
 }

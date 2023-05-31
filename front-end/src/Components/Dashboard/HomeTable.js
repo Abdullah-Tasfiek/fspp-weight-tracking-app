@@ -1,5 +1,5 @@
 import React from "react";
-import DailySummary from "../DailySummary";
+import DailySummary from "./DailySummary";
 
 export default function HomeTable() {
   return (

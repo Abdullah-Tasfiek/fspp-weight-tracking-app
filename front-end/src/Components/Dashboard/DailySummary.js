@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "./DailySummary.scss"
 
 export default function DailySummary() {
   const [foods, setFoods] = useState([]);
@@ -21,7 +22,7 @@ export default function DailySummary() {
   let totalCaloriesConsumed = 0;
 
   return (
-    <div className="bg-grey p-6">
+    <div className="dailySummary">
       {foods.map((food, index) => {
         totalCaloriesConsumed += parseInt(food.calories);
         // return <TotalCalories key={index} food={food} index={index} />;

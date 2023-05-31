@@ -1,78 +1,65 @@
 import React from "react";
 import "./NavBar.scss";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Nav = () => {
-
-  //to change burger classes
-  const [burgerClass, setBurgerClass] = useState("burger-bar unclicked");
-  const [menuClass, setMenuClass] = useState("menu hidden");
-  const [isMenuClicked, setisMenuClicked] = useState(false);
-
-  const updateMenu = () => {
-    if (!isMenuClicked) {
-      setBurgerClass("burger-bar clicked");
-      setMenuClass("menu visible");
-    } else {
-      setBurgerClass("burger-bar unclicked");
-      setMenuClass("menu hidden");
-    }
-
-    setisMenuClicked(!isMenuClicked);
-  };
-
   return (
-    <nav className="navbar">
-      <div className="navbar__container">
+    <nav className="navbar navbar-dark navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-expand-xl">
+      <div className="container-fluid">
         {/* Logo */}
         <div className="navbar__container__logo">
-          <a href="/home">BetterHealth</a>
-        </div>
-        {/* Navbar BurgerMenu*/}
-        <div className="navbar__container__burgerMenu" onClick={updateMenu}>
-          <div className={burgerClass}></div>
-          <div className={burgerClass}></div>
-          <div className={burgerClass}></div>
+          <a className="navbar-brand text-white" href="/">
+            <img
+              src={require("../../Assets/logo192.png")}
+              width="50"
+              height="50"
+              className="d-inline-block align-top"
+              alt="Company"
+            />{" "}
+            <span className="text-4xl">BetterHealth</span>
+          </a>
+          <span className="text-right">
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#toggleMobileMenu"
+              aria-controls="toggleMobileMenu"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+          </span>
         </div>
       </div>
-      <div className={menuClass}>
-        <div className="navbar__menu">
-          <div className="navbar__menu__item">
-            <a href="/">
-              <img src={require("../../Assets/home.png")} align="left"></img>Home
-            </a>
-          </div>
-          <div className="navbar__menu__item">
-            <a href="/welcome">
-              <img src={require("../../Assets/exam.png")} align="left"/>
+      <div className="collapse navbar-collapse" id="toggleMobileMenu">
+        <ul className="navbar-nav text-center">
+          <li className="nav-item">
+            <a
+              className="nav-link text-white"
+              aria-current="page"
+              href="/welcome"
+            >
               Welcome
             </a>
-          </div>
-          <div className="navbar__menu__item">
-            <a href="/myweight">
-              <img src={require("../../Assets/weighing-scale (3).png")} align="left"/>
-              Weigh In
+          </li>
+          <li className="nav-item">
+            <a className="nav-link text-white" href="/home">
+              Dashboard
             </a>
-          </div>
-          <div className="navbar__menu__item">
-            <a href="/myweight/logs">
-              <img src={require("../../Assets/list (1).png")} align="left"/>
-              Weight Logs
+          </li>
+          <li className="nav-item">
+            <a className="nav-link text-white" href="/myweight">
+              Weight
             </a>
-          </div>
-          <div className="navbar__menu__item">
-            <a href="/myfoods">
-              <img src={require("../../Assets/calculator.png")} align="left"/>
-              Track Foods
+          </li>
+          <li className="nav-item">
+            <a className="nav-link text-white" href="/myfoods">
+              Food
             </a>
-          </div>
-          <div className="navbar__menu__item">
-            <a href="/myfoods/new">
-              <img src={require("../../Assets/restaurant.png")} align="left"/>
-              Add Food
-            </a>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </nav>
   );
