@@ -17,7 +17,7 @@ const Navigation = () => {
               className="d-inline-block align-top"
               alt="Company"
             />{" "}
-            <span className="text-4xl">BetterHealth</span>
+            <span className="navbar__container__logo__text text-4xl">BetterHealth</span>
           </a>
         </div>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

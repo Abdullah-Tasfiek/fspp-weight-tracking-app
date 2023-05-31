@@ -2,7 +2,7 @@
     &__container {
         display: grid;
         // grid-template-columns: 1fr 1fr;
-        grid-template-columns: repeat(auto-fit, minmax(230px, 710px));
+        grid-template-columns: repeat(auto-fill, minmax(900px, 1fr));
         grid-row: 2;
         margin-bottom: 10px;
         &__a, &__b, &__c, &__d {

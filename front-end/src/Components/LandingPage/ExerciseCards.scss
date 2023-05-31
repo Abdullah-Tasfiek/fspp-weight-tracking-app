@@ -1,19 +1,21 @@
 .exerciseCards__title {
-    font-size: 50px;
-    padding: 81px;
+    font-size: 30px;
+    padding: 30px;
+    margin-left: 78px;
 
     &__subsection {
     margin-top: 25px;
-    font-size: 25px;
-    padding: 3px;
+    font-size: 20px;
+    padding: 2px;
     }
 }
 .exerciseCards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     justify-items: center;
-    margin-top: -70px;
+    margin-top: -30px;
     margin-bottom: 20px;
+    padding: 30px
 }
 .exerciseCard {
     background-color: #F3F2F8;
@@ -44,8 +46,9 @@
   }
   
   .image {
-      max-width: 300px;
-      border-radius: 4px
+      max-width: 290px;
+      margin-left: 5px;
+      border-radius: 4px;
   }
   
   .key {

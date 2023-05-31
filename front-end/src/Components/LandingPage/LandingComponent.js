@@ -29,7 +29,6 @@ export default function LandingComponent() {
             src="https://cloudfront.fitnessblender.com/assets/img/homepage/team-2023-1440.webp"
           ></img>
         </div>
-        <div></div>
       </div>
     </div>
   );
