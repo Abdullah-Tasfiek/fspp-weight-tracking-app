@@ -2,10 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "./DailySummary.scss"
+import "./DailySummary.scss";
+import AddFoodModal from "./AddFoodModal";
 
 export default function DailySummary() {
   const [foods, setFoods] = useState([]);
+  const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
     const API = process.env.REACT_APP_API_URL;
@@ -36,9 +38,15 @@ export default function DailySummary() {
           {totalCaloriesConsumed}
         </div>
       </div>
-      <Link to="/myfoods/new" className="bg-grey">
+      <button
+        className="bg-grey openModalBtn"
+        onClick={() => {
+          setOpenModal(true);
+        }}
+      >
         Add Food
-      </Link>
+      </button>
+      <div>{openModal && <AddFoodModal closeModal={setOpenModal}/>}</div>
     </div>
   );
 }
