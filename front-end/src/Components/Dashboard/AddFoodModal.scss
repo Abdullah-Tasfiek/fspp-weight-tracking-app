@@ -8,15 +8,15 @@
     position: relative; 
 
     &__container {
-        width: 375px;
-        height: 550px;
+        width: 350px;
+        height: 475px;
         border-radius: 12px;
         background-color: white;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         display: flex;
         flex-direction: column;
         padding: 25px;
-        position: absolute; left: -12px;
+        position: absolute; left: 0px;
         bottom: 90%;
 
         &__closeBtn {
@@ -27,7 +27,7 @@
         &__title {
             display: inline-block;
             text-align: center;
-            font-size: 45px;
+            font-size: 32px;
         }
 
         &__body {
@@ -51,4 +51,10 @@
             text-align: center;
         }
     }
+}
+
+.addFoodInput {
+    border-radius: 3px;
+    border: solid black 0.5px;
+    float: right;
 }

@@ -9,7 +9,7 @@
 
     &__container {
         width: 375px;
-        height: 400px;
+        height: 300px;
         border-radius: 12px;
         background-color: white;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -27,7 +27,7 @@
         &__title {
             display: inline-block;
             text-align: center;
-            font-size: 45px;
+            font-size: 32px;
         }
 
         &__body {
@@ -51,4 +51,10 @@
             text-align: center;
         }
     }
+}
+
+.addWeightInput {
+    border-radius: 3px;
+    border: solid black 0.5px;
+    float: right;
 }

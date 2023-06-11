@@ -30,7 +30,7 @@ const FoodIndex = () => {
         .delete(`${API}/myfoods/${foods[i].id}`)
         .then(() => {})
         .catch((err) => {
-          console.warn(err);
+          console.warn(err); 
         });
     }
   };

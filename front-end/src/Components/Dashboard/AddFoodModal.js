@@ -18,22 +18,22 @@ export default function AddFoodModal({ closeModal }) {
         </div>
         <div className="modalBackground__container__body">
           <div className="modalBackground__container__body__label">
-            <label>Name:</label> <input></input>
+            <label>Name:</label> <input className="addFoodInput" size={18}></input>
           </div>
           <div className="modalBackground__container__body__label">
-            <label>Calories:</label> <input></input>
+            <label>Calories:</label> <input className="addFoodInput" size={18}></input>
           </div>
           <div className="modalBackground__container__body__label">
-            <label>Protein:</label> <input></input>
+            <label>Protein:</label> <input className="addFoodInput" size={18}></input>
           </div>
           <div className="modalBackground__container__body__label">
-            <label>Carbs:</label> <input></input>
+            <label>Carbs:</label> <input className="addFoodInput" size={18}></input>
           </div>
           <div className="modalBackground__container__body__label">
-            <label>Fats:</label> <input></input>
+            <label>Fats:</label> <input className="addFoodInput" size={18}></input>
           </div>
           <div className="modalBackground__container__body__label">
-            <label>Fiber:</label> <input></input>
+            <label>Fiber:</label> <input className="addFoodInput" size={18}></input>
           </div>
         </div>
         <div className="modalBackground__container__footer">
