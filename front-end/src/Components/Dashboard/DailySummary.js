@@ -22,31 +22,53 @@ export default function DailySummary() {
   }, []);
 
   let totalCaloriesConsumed = 0;
+  let color = "#9DC152";
 
   return (
-    <div className="dailySummary">
-      {foods.map((food, index) => {
-        totalCaloriesConsumed += parseInt(food.calories);
-        // return <TotalCalories key={index} food={food} index={index} />;
-      })}
-      <div>
-        Total Calories Consumed {foods.calories}
-        <button>
-          <span className="text-blue">reset</span>
-        </button>
-        <div className="text-green text-5xl font-bold">
-          {totalCaloriesConsumed}
+    <div className="dailySummaryBackground">
+      <div className="dailySummaryBackground__container">
+        <div className="dailySummaryBackground__container__header">
+          <h3>Your Daily Summary</h3>
+        </div>
+        <div className="dailySummaryBackground__container__body">
+          <div className="dailySummaryBackground__container__body__summary">
+            <div className="dailySummaryBackground__container__body__summary__section1">
+              Total Calories Consumed{" "}
+              <button
+                onClick={() => {
+                  console.log("This should clear the calories");
+                }}
+              >
+                <span className="text-blue">reset</span>
+              </button>
+              <div className="dailySummaryBackground__container__body__summary__section1__calories">
+                {foods.map((food, index) => {
+                  totalCaloriesConsumed += parseInt(food.calories);
+                  // return <TotalCalories key={index} food={food} index={index} />;
+                })}
+                {totalCaloriesConsumed} kcal
+              </div>
+            </div>
+            <div className="dailySummaryBackground__container__body__summary__section2">
+              <button
+                className="addFoodBtn"
+                onClick={() => {
+                  setOpenModal(true);
+                }}
+              >
+                Add Food
+              </button>
+              <div>
+                {openModal && <AddFoodModal closeModal={setOpenModal} />}
+              </div>
+              <button className="addWeightBtn">Add Weight</button>
+            </div>
+          </div>
+        </div>
+        <div className="dailySummaryBackground__container__footer">
+          {/* <div className="dailySummaryBackground__container__footer__progress"></div> */}
         </div>
       </div>
-      <button
-        className="bg-grey openModalBtn"
-        onClick={() => {
-          setOpenModal(true);
-        }}
-      >
-        Add Food
-      </button>
-      <div>{openModal && <AddFoodModal closeModal={setOpenModal}/>}</div>
     </div>
   );
 }

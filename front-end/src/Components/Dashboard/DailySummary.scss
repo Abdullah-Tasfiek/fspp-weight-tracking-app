@@ -1,3 +1,57 @@
-.openModalBtn {
-    
+.dailySummaryBackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+
+    &__container {
+        width: 600px;
+        height: 300px;
+        border-radius: 12px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        &__header {
+            color: white;
+            background-color: #222529;
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 2px;
+        }
+
+        &__body {
+            &__summary {
+                &__section1 {
+                    padding: 10px;
+                    &__calories {
+                        color:#9DC152;
+                        font-size: 50px;
+                        font-weight: bold;
+                    }
+                }
+
+                &__section2 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.addFoodBtn {
+    width: 200px;
+    height: 40px;
+    border: solid 1px black;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 5px;
+}
+.addWeightBtn {
+    width: 200px;
+    height: 40px;
+    border: solid 1px black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 5px;
 }

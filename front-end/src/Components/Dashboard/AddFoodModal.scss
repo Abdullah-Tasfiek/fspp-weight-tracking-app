@@ -1,11 +1,11 @@
 .modalBackground {
     width: 100vw;
     height: 100vh;
-    background-color: rgba(200, 200, 200);
-    position: absolute; top: 0;
+    // background-color: rgba(200, 200, 200);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative; 
 
     &__container {
         width: 500px;
@@ -16,6 +16,9 @@
         display: flex;
         flex-direction: column;
         padding: 25px;
+        position: absolute;
+        left: 50px;
+        bottom: 90%;
 
         &__closeBtn {
             display: flex;
@@ -29,7 +32,7 @@
         }
 
         &__body {
-            padding: 30px;
+            padding: 10px;
             font-size: 20px;
 
             &__label {

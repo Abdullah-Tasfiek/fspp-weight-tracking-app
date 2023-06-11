@@ -7,7 +7,7 @@ const Home = () => {
     <div className="Home">
       <CalculateWeights />
       <DailySummary />
-      <MacroChart />
+      {/* <MacroChart /> */}
     </div>
   );
 };
