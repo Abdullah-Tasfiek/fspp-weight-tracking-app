@@ -4,10 +4,12 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./DailySummary.scss";
 import AddFoodModal from "./AddFoodModal";
+import AddWeightModal from "./AddWeightModal";
 
 export default function DailySummary() {
   const [foods, setFoods] = useState([]);
   const [openModal, setOpenModal] = useState(false);
+  const [openWeightModal, setOpenWeightModal] = useState(false);
 
   useEffect(() => {
     const API = process.env.REACT_APP_API_URL;
@@ -61,7 +63,19 @@ export default function DailySummary() {
               <div>
                 {openModal && <AddFoodModal closeModal={setOpenModal} />}
               </div>
-              <button className="addWeightBtn">Add Weight</button>
+              <button
+                className="addWeightBtn"
+                onClick={() => {
+                  setOpenWeightModal(true);
+                }}
+              >
+                Add Weight
+              </button>
+              <div>
+                {openWeightModal && (
+                  <AddWeightModal closeWeightModal={setOpenWeightModal} />
+                )}
+              </div>
             </div>
           </div>
         </div>
