@@ -27,7 +27,7 @@ function AddWeightModal({ closeWeightModal }) {
       .catch((err) => {
         console.warn(err);
       });
-    alert("We successfully added your weight!");
+    alert("You've successfully added your weight!");
 
     closeWeightModal(false)
   };
@@ -48,7 +48,7 @@ function AddWeightModal({ closeWeightModal }) {
         </div>
         <form onSubmit={handleSubmit} className="modalWeightBackground__container__body">
           <div className="modalWeightBackground__container__body__label">
-            <label htmlFor="date">Date:</label>{" "}
+            <label htmlFor="date">Date</label>{" "}
             <input
               type="text"
               name="date"
@@ -59,7 +59,7 @@ function AddWeightModal({ closeWeightModal }) {
             ></input>
           </div>
           <div className="modalWeightBackground__container__body__label">
-            <label htmlFor="current_weight">Weight:</label>{" "}
+            <label htmlFor="current_weight">Weight</label>{" "}
             <input
               type="number"
               name="current-weight-count"
