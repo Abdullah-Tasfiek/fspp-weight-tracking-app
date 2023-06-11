@@ -8,16 +8,15 @@
     position: relative; 
 
     &__container {
-        width: 500px;
-        height: 500px;
+        width: 375px;
+        height: 550px;
         border-radius: 12px;
         background-color: white;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         display: flex;
         flex-direction: column;
         padding: 25px;
-        position: absolute;
-        left: 50px;
+        position: absolute; left: -12px;
         bottom: 90%;
 
         &__closeBtn {
@@ -34,6 +33,7 @@
         &__body {
             padding: 10px;
             font-size: 20px;
+            text-align: left;
 
             &__label {
                 margin-top: 10px;

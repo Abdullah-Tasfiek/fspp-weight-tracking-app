@@ -2,6 +2,7 @@
     padding: 20px;
     display: flex;
     justify-content: center;
+    margin-top: 15px;
     
     &__container {
         background-color: white;
@@ -9,6 +10,7 @@
         display: grid;
         grid-template-columns: 100px 220px;
         box-shadow: 1px 1px 5px 5px rgba(0.1,0.1,0.1,0.1);
+        min-width: 350px;
 
         &__column1 {
             max-width: 50px;

@@ -39,6 +39,7 @@ const FoodIndex = () => {
 
   return (
     <div>
+      <h2 className="text-5xl text-center">Food Logs</h2>
       {foods.map((food, index) => {
         totalCaloriesConsumed += parseInt(food.calories);
         // return <TotalCalories key={index} food={food} index={index} />;

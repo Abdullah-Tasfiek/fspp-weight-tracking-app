@@ -17,7 +17,9 @@ const Navigation = () => {
               className="d-inline-block align-top"
               alt="Company"
             />{" "}
-            <span className="navbar__container__logo__text text-4xl">BetterHealth</span>
+            <span className="navbar__container__logo__text text-4xl">
+              BetterHealth
+            </span>
           </a>
         </div>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -26,7 +28,7 @@ const Navigation = () => {
           <Nav className="text-center">
             <Nav.Link href="/welcome">Welcome</Nav.Link>
             <Nav.Link href="/home">Dashboard</Nav.Link>
-            <Nav.Link href="/myweight">Weight</Nav.Link>
+            <Nav.Link href="/myweight/logs">Weight</Nav.Link>
             <Nav.Link href="/myfoods">Food</Nav.Link>
           </Nav>
         </Navbar.Collapse>
