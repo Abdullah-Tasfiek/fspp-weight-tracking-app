@@ -1,6 +1,7 @@
 import React from "react";
 import "./Welcome.scss";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 export default function Welcome() {
   return (
@@ -23,9 +24,9 @@ export default function Welcome() {
         <div>Then we can set some daily targets to help you get there.</div>
       </div>
       <div className="landingCard__footer">
-        <a href="/welcome/about-you">
+        <Link to="/welcome/about-you">
           <Button variant="contained">GET STARTED</Button>
-        </a>
+        </Link>
       </div>
     </div>
   );

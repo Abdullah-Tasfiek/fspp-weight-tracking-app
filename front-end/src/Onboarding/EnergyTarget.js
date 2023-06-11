@@ -5,6 +5,7 @@ import Switch from "@mui/material/Switch";
 import FormControlLabel from "@mui/material/FormControlLabel";
 
 export default function EnergyTarget() {
+
   return (
     <div className="onboarding">
       <div className="onboarding__progress">

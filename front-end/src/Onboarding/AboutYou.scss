@@ -2,7 +2,7 @@
     background-color: #FFFFFF;
     box-shadow: 1px 1px 5px 5px rgba(0.1,0.1,0.1,0.1);
     margin: auto;
-    width: 95%;
+    max-width: 65%;
     padding: 10px;
     margin-top: 2em;
     margin-bottom: 2em;
@@ -60,7 +60,7 @@
       
     &__about {
     display: grid;
-    place-items: left;
+    place-items: center;
     margin: auto;
     width: 100%;
     color: grey;
@@ -78,12 +78,15 @@
 
     &__heading {
         font-family: -apple-system,BlinkMacSystemFont,Raleway,Segoe         UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica     Neue,sans-serif;
-        text-align: left;
+        text-align: center;
         font-size: 25px;
-        font-weight: 400;
+        font-weight: 600;
         margin-bottom: 8px;
         border-top: 0.5px solid grey;
         padding: 1em;
+        display: flex;
+        justify-content: center;
+        border-bottom: solid 1px black;
     }
     
     &__footer {
