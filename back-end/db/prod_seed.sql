@@ -1,4 +1,4 @@
-\c dahh1r933l64ci; 
+\c d1dcjajl5deco7; 
 
 INSERT INTO users (name, image, email, age, gender, height, starting_weight, current_weight, goal_weight, firebase_id) VALUES
 ('Abdullah Tasfiek', 'https://media.licdn.com/dms/image/C4D03AQFADxcPWS5KAQ/profile-displayphoto-shrink_800_800/0/1643303967618?e=1680739200&v=beta&t=P3DucFIIn2x714X-Y7eVHwBW2s0nh9tCSVm9iSPMb9o', 'abadootasfiek@gmail.com', 25, 'Male', '6"1', 230, 220, 180, '4lrum2c0EVgjjsXM4pHSoxLPbAG3');

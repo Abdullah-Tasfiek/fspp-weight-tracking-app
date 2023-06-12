@@ -1,4 +1,4 @@
-\c dahh1r933l64ci;
+\c d1dcjajl5deco7;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS foods;
 DROP TABLE IF EXISTS weights;
