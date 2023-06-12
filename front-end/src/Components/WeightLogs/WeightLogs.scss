@@ -1,0 +1,38 @@
+.weightLogsBackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 100px;
+
+    &__container {
+        font-size: 25px;
+        padding: 10px;
+        width: 500px;
+        height: 300px;
+        border-radius: 12px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+}
+
+.logsTitle {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+}
+
+.subHeadings {
+    text-align: center;
+    font-size: 25px;
+}
+
+.column1 {
+    margin-right: 180px;
+    border-bottom: solid 2px black;
+}
+
+.column2 {
+    margin-right: 160px;
+    border-bottom: solid 2px black;
+}

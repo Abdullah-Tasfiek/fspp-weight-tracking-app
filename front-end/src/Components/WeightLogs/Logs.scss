@@ -1,0 +1,10 @@
+.logsBackground {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &__dates__item {
+        border-bottom: 1px solid black;
+    }
+    &__weights__item {
+        border-bottom: 1px solid black;
+    }
+}
