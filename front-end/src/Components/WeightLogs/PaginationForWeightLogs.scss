@@ -15,12 +15,9 @@
         &__number {
             border-right: solid 2px black;
             margin-left: 5px;
-            padding: 7px;
+            padding: 6px;
+            cursor: pointer;
             
         }
     }
-}
-
-.page-link {
-    cursor: pointer;
 }
