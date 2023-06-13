@@ -48,7 +48,7 @@ function PaginationForWeightLogs({ logsPerPage, totalLogs, paginate }) {
             }`}
             onClick={() => handleClick(number)}
           >
-            <a>{number}</a>
+            <a className="pageNumber">{number}</a>
           </span>
         ))}
         {activeRange[1] < pageNumbers.length && (

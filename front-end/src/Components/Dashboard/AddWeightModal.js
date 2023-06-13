@@ -74,6 +74,7 @@ function AddWeightModal({ closeWeightModal }) {
             Add Weight
           </button>
         </div>
+        <a href="/myweight/logs"className="text-blue underline flex justify-start p-1">View logs</a>
       </div>
     </div>
   );

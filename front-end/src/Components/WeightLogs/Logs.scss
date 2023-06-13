@@ -2,9 +2,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     &__dates__item {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #005E9E;
     }
     &__weights__item {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #005E9E;
     }
 }

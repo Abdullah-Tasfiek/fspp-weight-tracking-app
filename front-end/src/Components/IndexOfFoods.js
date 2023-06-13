@@ -30,7 +30,7 @@ const FoodIndex = () => {
         .delete(`${API}/myfoods/${foods[i].id}`)
         .then(() => {})
         .catch((err) => {
-          console.warn(err); 
+          console.warn(err);
         });
     }
   };
@@ -39,14 +39,28 @@ const FoodIndex = () => {
 
   return (
     <div>
-      <h2 className="text-5xl text-center">Food Logs</h2>
+      <h2 className="text-4xl text-center">Food Logs</h2>
       {foods.map((food, index) => {
         totalCaloriesConsumed += parseInt(food.calories);
         // return <TotalCalories key={index} food={food} index={index} />;
       })}
-      <h2 className="text-3xl">
+      <div className="flex justify-center">
+        <div className="p-4">
+          <div className=" text-center">
+            <div>Don't know the nutrition facts of what you ate?</div>
+            <div>
+              Search for the food and we'll provide the nutritional facts!
+            </div>
+          </div>
+          <div className="p-4">
+            <span className="text-xl p-1">🔎</span>
+            <input className="border" size={40}></input>
+          </div>
+        </div>
+      </div>
+      <div className="text-3xl">
         Total Calories Consumed: {totalCaloriesConsumed}
-      </h2>
+      </div>
       <Link className="nav-link" to="/myfoods/new">
         <button className="button" href="/myfoods/new">
           Add Food

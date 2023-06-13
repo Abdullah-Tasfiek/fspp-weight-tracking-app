@@ -4,20 +4,26 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+    color: black;
   
 
     &__container {
-        border: solid 1.5px black;
+        border: solid 3px #005E9E;
         text-align: left;
         border-radius: 5px;
         margin-top: -100px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
         &__number {
-            border-right: solid 2px black;
+            border-right: solid 3px #005E9E;
             margin-left: 5px;
             padding: 6px;
             cursor: pointer;
             
         }
     }
+}
+
+.pageNumber {
+    margin-right: 5px;
 }

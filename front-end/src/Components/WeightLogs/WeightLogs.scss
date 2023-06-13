@@ -13,6 +13,7 @@
         border-radius: 12px;
         background-color: white;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border: #005E9E 3px solid;
     }
 }
 
@@ -25,14 +26,17 @@
 .subHeadings {
     text-align: center;
     font-size: 25px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .column1 {
     margin-right: 180px;
-    border-bottom: solid 2px black;
+    border-bottom: solid 2px #005E9E;
 }
 
 .column2 {
     margin-right: 160px;
-    border-bottom: solid 2px black;
+    border-bottom: solid 2px #005E9E;
 }
