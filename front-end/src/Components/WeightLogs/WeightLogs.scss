@@ -21,14 +21,24 @@
     font-size: 30px;
     text-align: center;
     padding: 20px;
+    
 }
 
-.subHeadings {
+.subHeadings__background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subHeadings__container {
+    padding: 5px;
     text-align: center;
     font-size: 25px;
     border-radius: 12px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: solid 3px #005E9E;
+    min-width: 500px;
+    max-width: 540px;
 }
 
 .column1 {

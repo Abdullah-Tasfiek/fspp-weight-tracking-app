@@ -21,6 +21,12 @@
             cursor: pointer;
             
         }
+
+        &__number.active {
+            background-color: #A4C062;
+            margin-left: -1px;
+            
+        }
     }
 }
 
