@@ -14,6 +14,8 @@ function FoodLogger() {
   const [foodData, setFoodData] = useState([]);
   const [foodLog, setFoodLog] = useState([]);
   const [nutritionFacts, setNutritionFacts] = useState([]);
+  const errorMessage =
+    "We had a problem analysing this. Please check the ingredient spelling or if you have entered a quantities for the ingredients.";
 
   const getNutritionFacts = async () => {
     setLoading(true);
@@ -25,7 +27,7 @@ function FoodLogger() {
     return;
   };
 
-  console.log("Json:", data.calories);
+  // console.log("Json:", data.calories);
 
   return (
     <div className="foodLoggerBackground">
@@ -53,9 +55,7 @@ function FoodLogger() {
             style={{ width: "40%" }}
             className="foodLoggerBackground__container__textArea__border"
           ></textarea> */}
-          <input
-            style={({ border: "solid 1px black" }, { padding: "5px" })}
-          ></input>
+          <input style={{ border: "solid 1px black", padding: "5px" }}></input>
         </div>
         {loading ? (
           <div>

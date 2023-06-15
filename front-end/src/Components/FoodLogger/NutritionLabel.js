@@ -10,18 +10,40 @@ export default function NutritionLabel({ loading }) {
           Nutrition Facts
         </div>
         <div className="nutritionLabelBackground__container__subHeading">
-          <div className="nutritionLabelBackground__container__subHeading__divider"></div>
-          <div>Amount Per Serving</div>
-          <div>
-            Calories <span>336</span>
+          <div className="nutritionLabelBackground__container__subHeading__divider__top"></div>
+          <div className="nutritionLabelBackground__container__subHeading__serving">
+            Amount Per Serving
           </div>
-          <div className="nutritionLabelBackground__container__subHeading__divider"></div>
+          <div className="nutritionLabelBackground__container__subHeading__calories">
+            Calories{" "}
+            <span className="nutritionLabelBackground__container__subHeading__span">
+              1774
+            </span>
+          </div>
+          <div className="nutritionLabelBackground__container__subHeading__divider__bottom"></div>
           <div className="nutritionLabelBackground__container__subHeading__end">
             % Daily Value*
           </div>
         </div>
         <div className="nutritionLabelBackground__container__body">
-          <div>
+          <table className="container__table">
+            <tbody>
+              <tr>
+                <td className="container__table__leeftColumn">Total Fat</td>
+                <td colSpan={1}>18.3g</td>
+                <td colSpan={2} className="container__table___wideColumn">28%</td>
+              </tr>
+            </tbody>
+            <div className="nutritionLabelBackground__container__body__divider"></div>
+            {/* <tbody>
+              <tr>
+                <td>1</td>
+                <td>Piece</td>
+                <td className="container__table___wideColumn">Apple</td>
+              </tr>
+            </tbody> */}
+          </table>
+          {/* <div>
             Total Fat 18.3g <span>28%</span>
           </div>
           <div>
@@ -56,7 +78,7 @@ export default function NutritionLabel({ loading }) {
           </div>
           <div>
             Potassium 179.1 mg <span>18%</span>
-          </div>
+          </div> */}
         </div>
         <div className="nutritionLabelBackground__container__footer">
           *Percent Daily Values are based on a 2000 calorie diet

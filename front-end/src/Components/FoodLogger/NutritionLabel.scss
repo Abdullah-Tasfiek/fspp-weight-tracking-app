@@ -6,31 +6,61 @@
   
     &__container {
       font-size: 25px;
-      border-radius: 12px;
-      box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 15px;
+      border-radius: 22px;
+      box-shadow: rgba(0.3, 0, 0.3) 0px 2px 5px;
       background-color: white;
       padding: 20px;
-      max-width: 400px;
+      max-width: 315px;
+      min-height: 715px;
   
       &__heading {
         font-weight: bold;
-        font-size: 18px;
-        margin-bottom: 10px;
+        font-size: 1.9rem;
+        margin-bottom: 5px;
+        margin-top: 1.5rem;
       }
   
       &__subHeading {
         font-weight: bold;
         font-size: 14px;
         margin-bottom: 10px;
+        text-align: left;
+
+        &__span {
+            font-size: 35px;
+            margin-left: 50px;
+            min-width: 90px;
+            max-width: 90px;
+        }
+
+        &__serving {
+            font-size: 15px;
+            margin-top: 10px;
+        }
+
+        &__calories {
+            font-size: 35px;
+        }
   
         &__divider {
-          border-bottom: 1px solid #999;
           margin: 4px 0;
+
+          &__top {
+            border-bottom: 10px solid #E8E8E8;
+          }
+
+          &__bottom {
+            border-bottom: 5px solid #E8E8E8;
+            margin-top: 10px;
+            width: 100%;
+          }
         }
   
         &__end {
-          font-size: 12px;
-          margin-top: 10px;
+          font-size: 11px;
+          margin-top: -2px;
+          text-align: right;
+          border-bottom: 1px solid #E8E8E8;
         }
       }
   
@@ -45,6 +75,10 @@
         span {
           font-weight: bold;
           margin-left: 4px;
+        }
+        &__divider {
+            border-bottom: 1px solid #E8E8E8;
+            max-width: 100%;
         }
       }
   
