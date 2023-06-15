@@ -1,4 +1,4 @@
-import IndexOfFoods from "../Components/IndexOfFoods";
+import IndexOfFoods from "../Components/FoodLogs/IndexOfFoods";
 
 function Index() {
   return (

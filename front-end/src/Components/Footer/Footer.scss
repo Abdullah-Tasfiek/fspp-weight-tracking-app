@@ -1,11 +1,11 @@
 .footer{
     background-color: #222431;
     color: white;
-    position: 100vh;
+    position: relative;
     width: 100%;
     padding: 20px; 
-    height: 100vh;
-    max-height: 700px;
+    min-height: 20vh;
+    max-height: 60vh;
 
     &__columns {
       display: grid;

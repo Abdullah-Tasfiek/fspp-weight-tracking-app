@@ -10,7 +10,7 @@ module.exports = {
         blue: "#2A64E5", //navbar
         navy: "#23517E", //table header
         lime: "#7CC26E", //buttons
-        green: "#93C23B", //text
+        green: "#83CA3D;", //text
         grey: "#F5F6F8", //footer
         blueText: "#3874CB",
       },

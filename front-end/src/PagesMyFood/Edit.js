@@ -1,4 +1,4 @@
-import EditFood from "../Components/EditFood";
+import EditFood from "../Components/FoodLogs/EditFood";
 
 function Edit() {
   return (

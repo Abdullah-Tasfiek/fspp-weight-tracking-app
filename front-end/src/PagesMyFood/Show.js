@@ -1,4 +1,4 @@
-import ShowFood from "../Components/ShowFood";
+import ShowFood from "../Components/FoodLogs/ShowFood";
 
 function Show() {
   return (

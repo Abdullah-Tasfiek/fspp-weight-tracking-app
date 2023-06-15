@@ -1,0 +1,55 @@
+.nutritionLabelBackground {
+    min-width: 400px;
+    max-width: 50%;
+    margin-top: 30px;
+    position: relative;
+  
+    &__container {
+      font-size: 25px;
+      border-radius: 12px;
+      box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 15px;
+      background-color: white;
+      padding: 20px;
+      max-width: 400px;
+  
+      &__heading {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+  
+      &__subHeading {
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 10px;
+  
+        &__divider {
+          border-bottom: 1px solid #999;
+          margin: 4px 0;
+        }
+  
+        &__end {
+          font-size: 12px;
+          margin-top: 10px;
+        }
+      }
+  
+      &__body {
+        font-size: 14px;
+        margin-bottom: 10px;
+  
+        div {
+          margin-bottom: 4px;
+        }
+  
+        span {
+          font-weight: bold;
+          margin-left: 4px;
+        }
+      }
+  
+      &__footer {
+        font-size: 12px;
+      }
+    }
+  }

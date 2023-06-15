@@ -1,4 +1,4 @@
-import NewFood from "../Components/NewFood";
+import NewFood from "../Components/FoodLogs/NewFood";
 
 function New() {
   return (

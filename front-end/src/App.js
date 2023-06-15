@@ -19,6 +19,7 @@ import OnboardingPage4 from "./Pages/OnboardingPage4/OnboardingPage4";
 import OnboardingPage5 from "./Pages/OnboardingPage5/OnboardingPage5";
 import OnboardingPage6 from "./Pages/OnboardingPage6/OnboardingPage6";
 import OnboardingPage7 from "./Pages/OnboardingPage7/OnboardingPage7";
+import FoodFinder from "./PagesMyFood/FoodFinder";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -50,6 +51,7 @@ function App() {
             <Route path="/welcome/completed" element={<OnboardingPage7 />} />
             <Route path="/home" element={<Home />} />
             <Route path="/myfoods" element={<Index />} />
+            <Route path="/myfoods/finder" element={<FoodFinder />} />
             <Route path="/myweight/logs" element={<WeightIndex />} />
             <Route path="/myfoods/:id" element={<Show />} />
             <Route path="/myweight/logs/:id" element={<ShowLog />} />

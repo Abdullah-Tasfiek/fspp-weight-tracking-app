@@ -1,0 +1,18 @@
+.foodLogBackground {
+    background-color: white;
+    min-width: 400px;
+    max-width: 50%;
+    margin-top: 30px;
+
+    &__container {
+        padding: 5px;
+        border: solid 1px grey;
+
+        &__table {
+            &__wideColumn {
+                width: 400px;
+            
+            }
+        }
+    }
+}

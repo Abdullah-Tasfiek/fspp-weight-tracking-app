@@ -143,8 +143,18 @@ export default function AddFoodModal({ closeModal }) {
             Add Food
           </button>
         </div>
-        <a href="/myfoods"className="text-blue underline flex justify-start p-1">View logs</a>
-        <a href="/myfoods"className="text-blue underline flex justify-start p-1">Don't know the nutrition facts?</a>
+        <a
+          href="/myfoods"
+          className="text-blue underline flex justify-start p-1"
+        >
+          View logs
+        </a>
+        <a
+          href="/myfoods/finder"
+          className="text-blue underline flex justify-start p-1"
+        >
+          Don't know the nutrition facts?
+        </a>
       </div>
     </div>
   );

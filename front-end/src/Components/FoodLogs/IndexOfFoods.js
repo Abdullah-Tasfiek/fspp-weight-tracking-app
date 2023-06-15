@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Food from "./Food";
 import Calories from "./Calories";
 import Date from "./Date";
-import TotalCalories from "./TotalCalories";
 
 const FoodIndex = () => {
   const [foods, setFoods] = useState([]);
@@ -44,20 +43,6 @@ const FoodIndex = () => {
         totalCaloriesConsumed += parseInt(food.calories);
         // return <TotalCalories key={index} food={food} index={index} />;
       })}
-      <div className="flex justify-center">
-        <div className="p-4">
-          <div className=" text-center">
-            <div>Don't know the nutrition facts of what you ate?</div>
-            <div>
-              Search for the food and we'll provide the nutritional facts!
-            </div>
-          </div>
-          <div className="p-4">
-            <span className="text-xl p-1">🔎</span>
-            <input className="border" size={40}></input>
-          </div>
-        </div>
-      </div>
       <div className="text-3xl">
         Total Calories Consumed: {totalCaloriesConsumed}
       </div>

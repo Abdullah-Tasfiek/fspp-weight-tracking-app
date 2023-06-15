@@ -30,7 +30,7 @@ export default function DailySummary() {
     <div className="dailySummaryBackground">
       <div className="dailySummaryBackground__container">
         <div className="dailySummaryBackground__container__header">
-          <h3>Your Daily Summary</h3>
+          <h3>Your Daily Calories</h3>
         </div>
         <div className="dailySummaryBackground__container__body">
           <div className="dailySummaryBackground__container__body__summary">

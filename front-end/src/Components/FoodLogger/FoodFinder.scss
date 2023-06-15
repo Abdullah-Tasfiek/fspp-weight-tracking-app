@@ -1,0 +1,63 @@
+.foodLoggerBackground {
+    text-align: center;
+    font-size: 20px;
+    padding: 40px;
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__container {
+        padding: 40px;
+        min-height: 90%;
+        max-height: 100%;
+        min-width: 90%;
+        max-width: 100%;
+        border-radius: 12px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border: #005E9E 1px solid;
+        background-color: #F2F4F8;
+        margin: auto;
+
+        &__titles {
+            font-size: 18px;
+            padding: 10px;
+
+        }
+
+        &__textArea {
+            margin-top: 20px;
+            margin-bottom: 20px;
+    
+
+
+
+            &__border {
+                border-radius: 0.6rem;
+                resize: both;
+                min-height: calc(4.5em + 0.75rem + 2px);
+                min-width: calc(10.5em + 0.75rem + 2px);
+                padding: 10px;
+            }
+        }
+
+        &__btn {
+            cursor: pointer;
+            margin: auto;
+            max-width: 100%;
+            padding: 12px;
+            border-radius: 40px;
+            color: white;
+            font-weight: 500;
+        }
+    }
+}
+
+.components {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    // grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    
+}
