@@ -28,9 +28,9 @@
 
         &__span {
             font-size: 35px;
-            margin-left: 50px;
-            min-width: 90px;
-            max-width: 90px;
+            margin-left: 20px;
+            min-width: 100px;
+            max-width: 100px;
         }
 
         &__serving {
@@ -40,6 +40,7 @@
 
         &__calories {
             font-size: 35px;
+            width: 275px;
         }
   
         &__divider {
@@ -65,8 +66,17 @@
       }
   
       &__body {
-        font-size: 14px;
+        font-size: 16px;
         margin-bottom: 10px;
+
+        &__table {
+            width: 275px;
+            text-align: left;
+            &__body__new {
+                border-top: 1px solid #E8E8E8;
+                padding: 5px;
+            }
+        }
   
         div {
           margin-bottom: 4px;
@@ -84,6 +94,7 @@
   
       &__footer {
         font-size: 12px;
+        margin-top: 40px;
       }
     }
   }
