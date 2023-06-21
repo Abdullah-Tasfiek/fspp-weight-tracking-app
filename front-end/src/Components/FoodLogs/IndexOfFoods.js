@@ -51,6 +51,10 @@ const FoodIndex = () => {
           Add Food
         </button>
       </Link>
+      <br></br>
+      <Link className="nav-link" to="/myfoods/finder">
+        <button className="button">Search for Food</button>
+      </Link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <Link className="nav-link" to="/myfoods">
         <button

@@ -1,45 +1,28 @@
 import React from "react";
 import data from "../../data/edamam.json";
 import "./FoodLogs.scss";
+import Log from "./Log";
 
 function FoodLog() {
   return (
     <div className="foodLogBackground">
-      <div className="container">
-        <table className="container__table">
+      <div className="foodLogBackground__container">
+        <table className="foodLogBackground__container__table">
           <thead>
             <tr>
               <th>Qty</th>
               <th>Unit</th>
-              <th className="container__table__wideColumn">
+              <th
+                colSpan={3}
+                className="foodLogBackground__container__table__wideColumn"
+              >
                 Food
               </th>
-              <th>Calories</th>
+              <th>Calories </th>
               <th>Weight</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Piece</td>
-              <td className="container__table___wideColumn">
-                Apple
-              </td>
-              <td>52</td>
-              <td>100g</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Piece</td>
-              <td className="container__table___wideColumn">
-                Apple
-              </td>
-              <td>52</td>
-              <td>100g</td>
-            </tr>
-          </tbody>
+          <Log data={data} />
         </table>
       </div>
     </div>

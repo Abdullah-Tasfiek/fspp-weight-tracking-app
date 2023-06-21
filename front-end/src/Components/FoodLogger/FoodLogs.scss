@@ -1,17 +1,15 @@
 .foodLogBackground {
     background-color: white;
-    min-width: 400px;
-    max-width: 50%;
     margin-top: 30px;
-
+    min-width: 350px;
+    max-width: 90%;
     &__container {
-        padding: 5px;
+        padding: 10px;
         border: solid 1px grey;
-        width: 350px;
 
         &__table {
             &__wideColumn {
-                width: 400px;
+                padding: 10px;
             
             }
         }
