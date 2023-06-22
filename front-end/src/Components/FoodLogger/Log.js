@@ -1,17 +1,16 @@
 import React from "react";
 import "./Log.scss";
 
-function Log({ data }) {
+function Log({ data, foodData }) {
   return (
     <tbody>
       <tr>
-        <td>1</td>
-        <td>Piece</td>
+        <td>{foodData.ingredients[0].parsed[0].quantity}</td>
+        <td>{foodData.ingredients[0].parsed[0].measure}</td>
         <td colSpan={3} className="wideColumn">
-          Apple
+          {foodData.ingredients[0].text}
         </td>
-        <td>90</td>
-        <td>100g</td>
+        <td>{foodData.calories}</td>
       </tr>
     </tbody>
   );

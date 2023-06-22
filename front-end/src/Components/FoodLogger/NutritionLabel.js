@@ -2,7 +2,8 @@ import React from "react";
 import data from "../../data/edamam.json";
 import "./NutritionLabel.scss";
 
-export default function NutritionLabel({ loading }) {
+export default function NutritionLabel({ loading, foodData }) {
+  console.log("Nutrition Label Component:", foodData);
   return (
     <div className="nutritionLabelBackground">
       <div className="nutritionLabelBackground__container">
@@ -18,7 +19,7 @@ export default function NutritionLabel({ loading }) {
             <tbody>
               <tr>
                 <td className="font-bold">Calories</td>
-                <td className="font-bold text-right">1774</td>
+                <td className="font-bold text-right">{foodData.calories}</td>
               </tr>
             </tbody>
           </table>
@@ -32,68 +33,108 @@ export default function NutritionLabel({ loading }) {
             <tbody className="nutritionLabelBackground__container__body__table__body">
               <tr>
                 <td>
-                  <span className="font-bold">Total Fat</span> 18.3 g
+                  <span className="font-bold">Total Fat</span>{" "}
+                  {foodData.totalNutrients.FAT.quantity.toFixed(1)} g
                 </td>
-                <td className="font-bold text-right">28 %</td>
+                <td className="font-bold text-right">
+                  {Math.ceil(foodData.totalDaily.FAT.quantity)} %
+                </td>
               </tr>
             </tbody>
             <tr className="nutritionLabelBackground__container__body__table__body__new">
-              <td className="tex-right">Saturated Fat 2 g</td>
-              <td className="font-bold text-right">10 %</td>
+              <td className="tex-right">
+                Saturated Fat{" "}
+                {foodData.totalNutrients.FASAT.quantity.toFixed(1)} g
+              </td>
+              <td className="font-bold text-right">
+                {Math.ceil(foodData.totalDaily.FASAT.quantity)} %
+              </td>
             </tr>
             <tr className="nutritionLabelBackground__container__body__table__body__new">
               <td className="tex-right">Trans Fat 0 g</td>
-              {/* <td className="font-bold text-right">10%</td> */}
             </tr>
             <tr className="nutritionLabelBackground__container__body__table__body__new">
               <td>
-                <span className="font-bold">Cholestrol</span> 0 mg
+                <span className="font-bold">Cholestrol</span>{" "}
+                {foodData.totalNutrients.CHOLE.quantity.toFixed(1)} mg
               </td>
-              <td className="font-bold text-right">0 %</td>
+              <td className="font-bold text-right">
+                {Math.ceil(foodData.totalDaily.CHOLE.quantity)} %
+              </td>
             </tr>
             <tr className="nutritionLabelBackground__container__body__table__body__new">
               <td>
-                <span className="font-bold">Sodium</span> 70 mg
+                <span className="font-bold">Sodium</span>{" "}
+                {foodData.totalNutrients.NA.quantity.toFixed(1)} mg
               </td>
-              <td className="font-bold text-right">3 %</td>
+              <td className="font-bold text-right">
+                {Math.ceil(foodData.totalDaily.NA.quantity)} %
+              </td>
             </tr>
             <tr className="nutritionLabelBackground__container__body__table__body__new">
               <td>
-                <span className="font-bold">Total Carbohydrates</span> 333.2 g
+                <span className="font-bold">Total Carbohydrates</span>{" "}
+                {foodData.totalNutrients.CHOCDF.quantity.toFixed(1)} g
               </td>
-              <td className="font-bold text-right">111 %</td>
+              <td className="font-bold text-right">
+                {Math.ceil(foodData.totalDaily.CHOCDF.quantity)} %
+              </td>
             </tr>
             <tr className="nutritionLabelBackground__container__body__table__body__new">
-              <td className="tex-right">Dietary Fiber 34.6 g</td>
-              <td className="font-bold text-right">138 %</td>
+              <td className="tex-right">
+                Dietary Fiber{" "}
+                {foodData.totalNutrients.FIBTG.quantity.toFixed(1)} g
+              </td>
+              <td className="font-bold text-right">
+                {Math.ceil(foodData.totalDaily.FIBTG.quantity)} %
+              </td>
             </tr>
             <tr className="nutritionLabelBackground__container__body__table__body__new">
-              <td className="tex-right">Total Sugars 30.3 g</td>
+              <td className="tex-right">Total Sugars -</td>
             </tr>
             <tr className="nutritionLabelBackground__container__body__table__body__new">
               <td className="tex-right">Includes - Added Sugars</td>
             </tr>
             <tr className="nutritionLabelBackground__container__body__table__body__new">
               <td>
-                <span className="font-bold">Protein</span> 71 g
+                <span className="font-bold">Protein</span>{" "}
+                {foodData.totalNutrients.PROCNT.quantity.toFixed(1)} g
               </td>
-              <td className="font-bold text-right">142 %</td>
+              <td className="font-bold text-right">
+                {Math.ceil(foodData.totalDaily.PROCNT.quantity)} %
+              </td>
             </tr>
             <tr className="nutritionLabelBackground__container__body__table__body__new">
-              <td className="tex-right">Vitamin D 0 µg</td>
-              <td className="font-bold text-right">0%</td>
+              <td className="tex-right">
+                Vitamin D {foodData.totalNutrients.VITD.quantity.toFixed(1)} µg
+              </td>
+              <td className="font-bold text-right">
+                {Math.ceil(foodData.totalDaily.VITD.quantity)} %
+              </td>
             </tr>
             <tr className="nutritionLabelBackground__container__body__table__body__new">
-              <td className="tex-right">Calcium 179.1 mg</td>
-              <td className="font-bold text-right">18%</td>
+              <td className="tex-right">
+                Calcium {foodData.totalNutrients.CA.quantity.toFixed(1)} mg
+              </td>
+              <td className="font-bold text-right">
+                {Math.ceil(foodData.totalDaily.CA.quantity)} %
+              </td>
             </tr>
             <tr className="nutritionLabelBackground__container__body__table__body__new">
-              <td className="tex-right">Iron 13.8 mg</td>
-              <td className="font-bold text-right">77 %</td>
+              <td className="tex-right">
+                Iron {foodData.totalNutrients.FE.quantity.toFixed(1)} mg
+              </td>
+              <td className="font-bold text-right">
+                {Math.round(foodData.totalDaily.FE.quantity)} %
+              </td>
             </tr>
             <tr className="nutritionLabelBackground__container__body__table__body__new">
-              <td className="tex-right">Potassium 2203.2 mg</td>
-              <td className="font-bold text-right">47 %</td>
+              <td className="tex-right">
+                Potassium {foodData.totalNutrients.K.quantity.toFixed(1)} mg
+              </td>
+              <td className="font-bold text-right">
+                {Math.round(foodData.totalDaily.K.quantity)} %
+              </td>
             </tr>
           </table>
         </div>

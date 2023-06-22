@@ -6,7 +6,7 @@ import axios from "axios";
 import data from "../../data/edamam.json";
 import FoodLog from "./FoodLogs";
 import NutritionLabel from "./NutritionLabel";
-const foodItem = "vanilla%20ice%20cream%20bar";
+const foodItem = "1%20cup%20of%20cooked%20white%20rice";
 const EDAMAM_API = process.env.REACT_APP_EDAMAM_API_URL;
 
 function FoodLogger() {
@@ -14,9 +14,8 @@ function FoodLogger() {
   const [food, setFood] = useState({
     name: "",
   });
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [foodData, setFoodData] = useState([]);
-  const [foodLog, setFoodLog] = useState([]);
-  const [nutritionFacts, setNutritionFacts] = useState([]);
   const [newFoodItem, setNewFoodItem] = useState("");
   const errorMessage =
     "We had a problem analyzing this. Please check the ingredient spelling or if you have entered a quantities for the ingredients.";
@@ -30,11 +29,16 @@ function FoodLogger() {
     event.preventDefault();
     setNewFoodItem(formatFoodDataFromUser(food.name));
     setLoading(true);
-    // const res = await axios.get(`${EDAMAM_API}${newFoodItem}`);
-    setTimeout(() => {
-      // setFoodData(res.data);
-      setLoading(false);
-    }, 1000);
+    try {
+      const res = await axios.get(`${EDAMAM_API}${foodItem}`);
+      setTimeout(() => {
+        setFoodData(res.data);
+        setLoading(false);
+        setIsSubmitted(true);
+      }, 1000);
+    } catch (error) {
+      return <p>{errorMessage}</p>;
+    }
   };
 
   const formatFoodDataFromUser = (string) => {
@@ -80,14 +84,18 @@ function FoodLogger() {
             <input type="submit" value="Analyze" className="mx-1"></input>
           </form>
         )}
-        <div className="components">
-          {/* <div>
-            <FoodLog />
+        {isSubmitted ? (
+          <div className="components">
+            <div>
+              <FoodLog foodData={foodData} />
+            </div>
+            <div>
+              <NutritionLabel foodData={foodData} />
+            </div>
           </div>
-          <div>
-            <NutritionLabel />
-          </div> */}
-        </div>
+        ) : (
+          <Loader />
+        )}
       </div>
     </div>
   );
