@@ -11,23 +11,35 @@ const EDAMAM_API = process.env.REACT_APP_EDAMAM_API_URL;
 
 function FoodLogger() {
   const [loading, setLoading] = useState(false);
+  const [food, setFood] = useState({
+    name: "",
+  });
   const [foodData, setFoodData] = useState([]);
   const [foodLog, setFoodLog] = useState([]);
   const [nutritionFacts, setNutritionFacts] = useState([]);
+  const [newFoodItem, setNewFoodItem] = useState("");
   const errorMessage =
-    "We had a problem analysing this. Please check the ingredient spelling or if you have entered a quantities for the ingredients.";
+    "We had a problem analyzing this. Please check the ingredient spelling or if you have entered a quantities for the ingredients.";
 
-  const getNutritionFacts = async () => {
-    setLoading(true);
-    // const res = await axios.get(`${EDAMAM_API}${foodItem}`);
-    setTimeout(() => {
-      //   setFoodData(res.data);
-      setLoading(false);
-    }, 1000);
-    return;
+  const handleTextChange = (event) => {
+    setFood({ ...food, [event.target.id]: event.target.value });
+    console.log(event.target.value);
   };
 
-  // console.log("Json:", data.calories);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setNewFoodItem(formatFoodDataFromUser(food.name));
+    setLoading(true);
+    // const res = await axios.get(`${EDAMAM_API}${newFoodItem}`);
+    setTimeout(() => {
+      // setFoodData(res.data);
+      setLoading(false);
+    }, 1000);
+  };
+
+  const formatFoodDataFromUser = (string) => {
+    return string.replaceAll(" ", "%20");
+  };
 
   return (
     <div className="foodLoggerBackground">
@@ -50,34 +62,31 @@ function FoodLogger() {
           </div>
           <div>Enter ONE ingredient at a time.</div>
         </div>
-        <div className="foodLoggerBackground__container__textArea">
-          {/* <textarea
-            style={{ width: "40%" }}
-            className="foodLoggerBackground__container__textArea__border"
-          ></textarea> */}
-          <input style={{ border: "solid 1px black", padding: "5px" }}></input>
-        </div>
+        <div className="foodLoggerBackground__container__textArea"></div>
         {loading ? (
           <div>
             <Loader loading={loading} />
           </div>
         ) : (
-          <div>
-            <button
-              onClick={getNutritionFacts}
-              className="foodLoggerBackground__container__btn bg-green"
-            >
-              Analyze
-            </button>
-          </div>
+          <form onSubmit={handleSubmit}>
+            <label className="text-3xl" htmlFor="name"></label>
+            <input
+              type="text"
+              name="food-name"
+              onChange={handleTextChange}
+              id="name"
+              className="foodLoggerBackground__container__btn"
+            />
+            <input type="submit" value="Analyze" className="mx-1"></input>
+          </form>
         )}
         <div className="components">
-          <div>
+          {/* <div>
             <FoodLog />
           </div>
           <div>
             <NutritionLabel />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

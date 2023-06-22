@@ -43,13 +43,13 @@
         }
 
         &__btn {
-            cursor: pointer;
             margin: auto;
             max-width: 100%;
             padding: 12px;
             border-radius: 40px;
-            color: white;
+            color: black;
             font-weight: 500;
+            border: 1px solid black;
         }
     }
 }
