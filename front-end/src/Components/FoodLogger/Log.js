@@ -1,7 +1,7 @@
 import React from "react";
 import "./Log.scss";
 
-function Log({ data, foodData }) {
+function Log({ foodData }) {
   return (
     <tbody>
       <tr>

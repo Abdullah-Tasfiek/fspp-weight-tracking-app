@@ -22,27 +22,33 @@ function FoodLogger() {
 
   const handleTextChange = (event) => {
     setFood({ ...food, [event.target.id]: event.target.value });
-    console.log(event.target.value);
+    setNewFoodItem(event.target.value);
+    console.log("newFoodITEM!!!!!!:::::", newFoodItem);
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setNewFoodItem(formatFoodDataFromUser(food.name));
+    const formattedInput = formatFoodDataFromUser(newFoodItem);
+    setNewFoodItem(formattedInput);
     setLoading(true);
+    const NEW_API = `${EDAMAM_API}${newFoodItem}`; // Use encodeURIComponent to properly encode the newFoodItem
     try {
-      const res = await axios.get(`${EDAMAM_API}${foodItem}`);
+      const res = await axios.get(NEW_API);
       setTimeout(() => {
         setFoodData(res.data);
+        console.log(foodData)
         setLoading(false);
         setIsSubmitted(true);
       }, 1000);
     } catch (error) {
-      return <p>{errorMessage}</p>;
+      console.error(error);
+      // Handle the error appropriately
     }
   };
 
   const formatFoodDataFromUser = (string) => {
-    return string.replaceAll(" ", "%20");
+    const formattedString = string.replaceAll(" ", "%20");
+    return formattedString;
   };
 
   return (

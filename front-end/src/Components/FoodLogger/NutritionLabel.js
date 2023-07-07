@@ -90,7 +90,12 @@ export default function NutritionLabel({ loading, foodData }) {
               </td>
             </tr>
             <tr className="nutritionLabelBackground__container__body__table__body__new">
-              <td className="tex-right">Total Sugars -</td>
+              <td className="tex-right">
+                Total Sugars -{" "}
+                {foodData.totalNutrients.SUGAR
+                  ? foodData.totalNutrients.SUGAR.quantity.toFixed(1)
+                  : ""}
+              </td>
             </tr>
             <tr className="nutritionLabelBackground__container__body__table__body__new">
               <td className="tex-right">Includes - Added Sugars</td>
