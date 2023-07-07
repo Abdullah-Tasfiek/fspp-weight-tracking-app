@@ -2,6 +2,9 @@ import React from "react";
 import "./Log.scss";
 
 function Log({ foodData }) {
+  if (!foodData || !foodData.ingredients || !foodData.ingredients[0].parsed) {
+    return <p>No data available</p>;
+  }
   return (
     <tbody>
       <tr>

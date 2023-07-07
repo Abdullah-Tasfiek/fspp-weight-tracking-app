@@ -3,7 +3,24 @@ import data from "../../data/edamam.json";
 import "./NutritionLabel.scss";
 
 export default function NutritionLabel({ loading, foodData }) {
-  console.log("Nutrition Label Component:", foodData);
+  if (!foodData) {
+    // Handle the case when foodData is undefined or null
+    return <p>No data available</p>;
+  }
+
+  const { calories, totalNutrients } = foodData;
+
+  if (!calories || !totalNutrients) {
+    // Handle the case when any required properties are undefined or null
+    return (
+      <div className="py-5">
+        <div className="font-bold underline text-2xl">Error</div>
+        We had a problem analyzing this. Please check the ingredient spelling
+        or if you have entered quantities for the ingredients.
+      </div>
+    );
+  }
+
   return (
     <div className="nutritionLabelBackground">
       <div className="nutritionLabelBackground__container">

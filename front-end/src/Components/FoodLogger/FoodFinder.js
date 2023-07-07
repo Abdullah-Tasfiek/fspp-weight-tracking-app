@@ -34,6 +34,7 @@ function FoodLogger() {
     const NEW_API = `${EDAMAM_API}${newFoodItem}`; // Use encodeURIComponent to properly encode the newFoodItem
     try {
       const res = await axios.get(NEW_API);
+      if(res.status === 200) 
       setTimeout(() => {
         setFoodData(res.data);
         console.log(foodData)

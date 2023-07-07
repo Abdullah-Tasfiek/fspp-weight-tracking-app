@@ -20,8 +20,6 @@ const FoodIndex = () => {
       });
   }, []);
 
-  console.log("foods:", foods);
-
   const clearLogs = (foods) => {
     const API = process.env.REACT_APP_API_URL;
     for (let i = 0; i < foods.length; i++) {
