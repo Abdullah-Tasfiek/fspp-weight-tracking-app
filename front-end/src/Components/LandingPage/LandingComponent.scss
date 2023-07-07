@@ -2,7 +2,7 @@
     display: grid;
     // grid-template-columns: 1fr 1fr;
     justify-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     background-color: lightblue;
     background-image: url('https://images.unsplash.com/photo-1588421357574-87938a86fa28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80');
     
@@ -22,7 +22,7 @@
         color: white;
         padding: 3px;
         font-size: 20px;
-        max-width: 500px;
+        max-width: 590px;
     }
 }
 

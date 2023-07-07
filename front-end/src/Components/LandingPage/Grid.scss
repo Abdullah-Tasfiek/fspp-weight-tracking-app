@@ -2,7 +2,7 @@
     &__container {
         display: grid;
         // grid-template-columns: 1fr 1fr;
-        grid-template-columns: repeat(auto-fill, minmax(900px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px));
         grid-row: 2;
         margin-bottom: 10px;
         &__a, &__b, &__c, &__d {
@@ -35,7 +35,7 @@
             }
         }
         &__b {
-            background-color: #F1F4F7;
+            background-color: #F1E7F5;
             &__image {
                 max-height: 325px;
             }

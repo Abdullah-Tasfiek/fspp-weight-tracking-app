@@ -1,3 +1,16 @@
-// .landingPage {
-//     height: 200vh;
-// }
+.landingPage {
+    /* Styles for the landing page container */
+  
+    &__content {
+      /* Styles for the content section */
+    }
+  
+    @media screen and (max-width: 768px) {
+      /* Styles for screens up to 768px wide */
+      .landingPage__content {
+        /* Adjust the layout and sizing of the content section for mobile screens */
+        max-width: 390px;
+        
+      }
+    }
+  }

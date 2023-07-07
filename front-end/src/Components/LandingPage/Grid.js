@@ -6,7 +6,7 @@ export default function Grid() {
     <div>
       <div className="grid">
         <div className="grid__container">
-          <div className="grid__container__a">
+          {/* <div className="grid__container__a">
             <div className="grid__container__a__title">Programs</div>
             <div className="grid__container__a__body">
               Professionally designed programs take the guesswork out of
@@ -19,7 +19,7 @@ export default function Grid() {
               className="grid__container__a__image"
               src="https://cloudfront.fitnessblender.com/assets/img/homepage/programs-1440.webp"
             />
-          </div>
+          </div> */}
           <div className="grid__container__b">
             <div className="grid__container__b__title">Workout Videos</div>
             <div className="grid__container__b__body">
@@ -34,7 +34,7 @@ export default function Grid() {
               src="https://cloudfront.fitnessblender.com/assets/img/homepage/workouts-1440.webp"
             />
           </div>
-          <div className="grid__container__c">
+          {/* <div className="grid__container__c">
             <div className="grid__container__c__title">Wellness Articles</div>
             <div className="grid__container__c__body">
               Research-backed articles to help you care for your body and mind.
@@ -46,7 +46,7 @@ export default function Grid() {
               className="grid__container__c__image"
               src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             />
-          </div>
+          </div> */}
           <div className="grid__container__d">
             <div className="grid__container__d__title">Healthy Recipes</div>
             <div className="grid__container__d__body">

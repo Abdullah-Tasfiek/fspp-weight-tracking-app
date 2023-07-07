@@ -4,7 +4,7 @@
     position: relative;
     width: 100%;
     padding: 20px; 
-    min-height: 20vh;
+    min-height: 40vh;
     max-height: 60vh;
 
     &__columns {
@@ -16,34 +16,28 @@
         color: #9395A5;
         font-size: 40px;
         font-family: noto;
-        padding: 60px;
         margin-left: 30px;
+        padding: 20px;
       }
 
       &__column2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
         color: white;
-        padding: 80px;
         gap: 20px;
         margin-left: 10px;
+        padding: 20px;
       }
     }
 
     &__footerEnd {
       color: #9395A5;
-      padding: 90px;
-      position: 100vh;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100, 300px));
-
+      padding: 50px;
 
       &__border {
         border-top: solid 0.1px #9395A5;
       }
 
       &__copyright {
-        margin-top: 30px;
+        margin-top: 5px;
       }
     }
   }
@@ -51,5 +45,4 @@
 body {
     margin: 0;
     min-height: 100vh;
-    display: grid;
 }
