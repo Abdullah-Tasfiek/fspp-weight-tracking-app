@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function PaginationForWeightLogs({ logsPerPage, totalLogs, paginate }) {
   const [currentPage, setCurrentPage] = useState(1);
-  const [activeRange, setActiveRange] = useState([1, 9]);
+  const [activeRange, setActiveRange] = useState([1, 5]);
 
   const pageNumbers = [];
 
@@ -19,13 +19,13 @@ function PaginationForWeightLogs({ logsPerPage, totalLogs, paginate }) {
 
   const handleNext = () => {
     if (activeRange[1] < pageNumbers.length) {
-      setActiveRange([activeRange[0] + 9, activeRange[1] + 9]);
+      setActiveRange([activeRange[0] + 5, activeRange[1] + 5]);
     }
   };
 
   const handlePrev = () => {
     if (activeRange[0] > 1) {
-      setActiveRange([activeRange[0] - 9, activeRange[1] - 9]);
+      setActiveRange([activeRange[0] - 5, activeRange[1] - 5]);
     }
   };
 

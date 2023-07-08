@@ -7,4 +7,8 @@
     &__weights__item {
         border-bottom: 1px solid #005E9E;
     }
+    @media screen and (max-width: 414px) {
+        /* Styles for screens up to 768px wide */
+        min-width: 390px;
+      }
 }

@@ -57,7 +57,7 @@ function FoodLogger() {
       <div className="foodLoggerBackground__title">
         <div>Don't know the nutrition facts of what you ate?</div>
         <div>
-          Search for an ingridient and we'll provide the nutritional facts!
+          Search for an ingredient and we'll provide the nutritional facts!
         </div>
       </div>
       <div className="foodLoggerBackground__container">

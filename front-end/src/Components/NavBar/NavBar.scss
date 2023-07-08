@@ -10,5 +10,9 @@
         color: white;
         margin-top: 100px;
     }
+    @media screen and (max-width: 414px) {
+        /* Styles for screens up to 768px wide */
+        min-width: 414px;
+      }
 } 
 

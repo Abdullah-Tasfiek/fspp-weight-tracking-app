@@ -36,7 +36,7 @@ function WeightLogs() {
       <h2 className="logsTitle">Weight Logs</h2>
       <div className="subHeadings__background">
         <div className="subHeadings__container">
-          <span className="column1">Date</span>
+          <span className="column1" >Date</span>
           <span className="column2">Weight</span>
         </div>
       </div>

@@ -8,13 +8,17 @@
     &__container {
         font-size: 25px;
         padding: 10px;
-        width: 500px;
+        width: 480px;
         height: 300px;
         border-radius: 12px;
         background-color: white;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         border: #005E9E 3px solid;
     }
+    @media screen and (max-width: 414px) {
+        /* Styles for screens up to 768px wide */
+        min-width: 414px;
+      }
 }
 
 .logsTitle {
@@ -31,22 +35,29 @@
 }
 .subHeadings__container {
     padding: 5px;
-    text-align: center;
+    text-align: left;
     font-size: 25px;
     border-radius: 12px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border: solid 3px #005E9E;
-    min-width: 500px;
-    max-width: 540px;
+    min-width: 480px;
+    @media screen and (max-width: 414px) {
+        /* Styles for screens up to 768px wide */
+        min-width: 414px;
+      }
 }
 
 .column1 {
-    margin-right: 180px;
     border-bottom: solid 2px #005E9E;
 }
 
 .column2 {
-    margin-right: 160px;
     border-bottom: solid 2px #005E9E;
+    margin-left: 180px;
+    @media screen and (max-width: 414px) {
+        /* Styles for screens up to 768px wide */
+        min-width: 414px;
+        margin-left: 150px;
+      }
 }

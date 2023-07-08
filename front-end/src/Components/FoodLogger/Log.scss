@@ -1,3 +1,8 @@
 .wideColumn {
     padding: 10px;
+    @media screen and (max-width: 414px) {
+        /* Styles for screens up to 768px wide */
+        min-width: 120px;
+
+    }
 }
