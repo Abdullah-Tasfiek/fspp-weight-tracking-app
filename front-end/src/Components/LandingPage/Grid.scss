@@ -2,15 +2,15 @@
     &__container {
         display: grid;
         // grid-template-columns: 1fr 1fr;
-        grid-template-columns: repeat(auto-fill, minmax(300px));
+        grid-template-columns: repeat(auto-fill, minmax(414px));
         grid-row: 2;
         margin-bottom: 10px;
         &__a, &__b, &__c, &__d {
             background-color: #F1E7F5;
             height: 550px;
-
             text-align: center;
-            margin: 0.4rem;
+            margin-left: 15px;
+            margin-bottom: 15px;
             &__title {
                 font-size: 40px;
                 margin-top: 40px;
@@ -27,17 +27,16 @@
             }
             &__image {
                 max-height: 260px;
-                margin-top: 30px;
                 display: block;
-                margin-left: auto;
-                margin-right: auto;
+                margin: auto;
                 border-radius: 5px;
             }
         }
         &__b {
             background-color: #F1E7F5;
             &__image {
-                max-height: 325px;
+                max-height: 250px;
+                margin-top: 40px;
             }
         }
         &__c {
@@ -48,8 +47,10 @@
         }
         &__d {
             background-color: #E4F7FE;
+            
             &__image {
-                max-height: 325px;
+                margin-top: 50px;
+                max-height: 250px;
             }
         }
     }

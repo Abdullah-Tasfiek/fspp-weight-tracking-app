@@ -1,5 +1,6 @@
 import React from "react";
 import "./Grid.scss";
+import { Link } from "react-router-dom";
 
 export default function Grid() {
   return (
@@ -21,17 +22,18 @@ export default function Grid() {
             />
           </div> */}
           <div className="grid__container__b">
-            <div className="grid__container__b__title">Workout Videos</div>
+            <div className="grid__container__b__title">Weight Tracker</div>
             <div className="grid__container__b__body">
-              Exercise with certified personal trainers whether you're at home
-              or on the road.
+              Keep daily track of your weight through logging!
             </div>
-            <a href="" className="grid__container__b__href">
-              Find a Workout
-            </a>
+            <Link to="/home">
+              <a href="" className="grid__container__b__href">
+                Add weight to log
+              </a>
+            </Link>
             <img
               className="grid__container__b__image"
-              src="https://cloudfront.fitnessblender.com/assets/img/homepage/workouts-1440.webp"
+              src="https://www.pngall.com/wp-content/uploads/2016/09/Weight-Scale-PNG.png"
             />
           </div>
           {/* <div className="grid__container__c">
@@ -48,18 +50,19 @@ export default function Grid() {
             />
           </div> */}
           <div className="grid__container__d">
-            <div className="grid__container__d__title">Healthy Recipes</div>
-            <div className="grid__container__d__body">
-              Fuel your day with recipes by Registered Dietitians and
-              professional chefs.
+            <div className="grid__container__d__title">
+              Food and Calorie Tracker
             </div>
-            <a href="" className="grid__container__d__href">
-              Find a Recipe
-            </a>
+            <div className="grid__container__d__body">
+              Keep track of your foods and caloric intake!
+            </div>
+            <Link to="/home">
+              <div className="grid__container__d__href">Food logs</div>
+            </Link>
             <div className="grid__container__d__imageContainer">
               <img
                 className="grid__container__d__image"
-                src="https://images.pexels.com/photos/406152/pexels-photo-406152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                src="https://cdn.pixabay.com/photo/2013/07/12/19/31/scale-154924_960_720.png"
               />
             </div>
           </div>

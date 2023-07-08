@@ -28,17 +28,26 @@ export default function ExerciseCards() {
             <div class="exerciseCard__divider"></div>
             <div class="exerciseCard__details">
               <div>
-                <a href="https://health.clevelandclinic.org/the-many-benefits-of-a-cardio-workout/">
+                <a
+                  target="_blank"
+                  href="https://health.clevelandclinic.org/the-many-benefits-of-a-cardio-workout/"
+                >
                   <span class="key">Benefits of Cardio</span>
                 </a>
               </div>
               <div>
-                <a href="https://www.everydayhealth.com/fitness/liss-cardio/">
+                <a
+                  target="_blank"
+                  href="https://www.everydayhealth.com/fitness/liss-cardio/"
+                >
                   <span class="key">Exercies</span>
                 </a>
               </div>
               <div>
-                <a href="https://www.youtube.com/watch?v=uBVREI0eJPI">
+                <a
+                  target="_blank"
+                  href="https://www.youtube.com/watch?v=uBVREI0eJPI"
+                >
                   <span class="key">Beginner Video</span>
                 </a>
               </div>
@@ -63,17 +72,26 @@ export default function ExerciseCards() {
             <div class="exerciseCard__divider"></div>
             <div class="exerciseCard__details">
               <div>
-                <a href="https://www.hsph.harvard.edu/news/hsph-in-the-news/strength-training-time-benefits/#:~:text=She%20explained%20that%20muscle%2Dstrengthening,blood%20pressure%2C%E2%80%9D%20she%20said.">
+                <a
+                  target="_blank"
+                  href="https://www.hsph.harvard.edu/news/hsph-in-the-news/strength-training-time-benefits/#:~:text=She%20explained%20that%20muscle%2Dstrengthening,blood%20pressure%2C%E2%80%9D%20she%20said."
+                >
                   <span class="key">Benefits of Weightlifting</span>
                 </a>
               </div>
               <div>
-                <a href="https://www.healthline.com/health/fitness-exercise/free-weight-exercises#advanced-routine">
+                <a
+                  target="_blank"
+                  href="https://www.healthline.com/health/fitness-exercise/free-weight-exercises#advanced-routine"
+                >
                   <span class="key">Exercies</span>
                 </a>
               </div>
               <div>
-                <a href="https://www.youtube.com/watch?v=ixkQaZXVQjs">
+                <a
+                  target="_blank"
+                  href="https://www.youtube.com/watch?v=ixkQaZXVQjs"
+                >
                   <span class="key">Beginner Video</span>
                 </a>
               </div>
@@ -98,17 +116,23 @@ export default function ExerciseCards() {
             <div class="exerciseCard__divider"></div>
             <div class="exerciseCard__details">
               <div>
-                <a href="https://www.cdc.gov/nutrition/resources-publications/benefits-of-healthy-eating.html">
+                <a
+                  target="_blank"
+                  href="https://www.cdc.gov/nutrition/resources-publications/benefits-of-healthy-eating.html"
+                >
                   <span class="key">Benefits of Dieting</span>
                 </a>
               </div>
               <div>
-                <a href="https://www.eatingwell.com/category/4305/weight-loss-meal-plans/">
+                <a
+                  target="_blank"
+                  href="https://www.eatingwell.com/category/4305/weight-loss-meal-plans/"
+                >
                   <span class="key">Meal Plans</span>
                 </a>
               </div>
               <div>
-                <a href="https://tdeecalculator.net/">
+                <a target="_blank" href="https://tdeecalculator.net/">
                   <span class="key">BMR Calculator</span>
                 </a>
               </div>
