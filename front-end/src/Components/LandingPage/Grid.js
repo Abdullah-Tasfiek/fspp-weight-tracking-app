@@ -28,7 +28,7 @@ export default function Grid() {
             </div>
             <Link to="/home">
               <a href="" className="grid__container__b__href">
-                Add weight to log
+                Add your weight!
               </a>
             </Link>
             <img
@@ -57,7 +57,7 @@ export default function Grid() {
               Keep track of your foods and caloric intake!
             </div>
             <Link to="/home">
-              <div className="grid__container__d__href">Food logs</div>
+              <div className="grid__container__d__href">Add your foods!</div>
             </Link>
             <div className="grid__container__d__imageContainer">
               <img
