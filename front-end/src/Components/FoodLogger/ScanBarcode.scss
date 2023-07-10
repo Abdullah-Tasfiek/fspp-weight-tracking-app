@@ -1,12 +1,23 @@
-#camera {
-    width: 100%;
-    height: 480px;
-    position: relative;
+.scan-barcode-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
   }
   
-  #video {
+  .video-container {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .video-element {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .content-container {
+    padding-top: 20px;
   }
   
