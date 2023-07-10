@@ -51,7 +51,7 @@ const ScanBarcode = () => {
           numOfWorkers: navigator.hardwareConcurrency || 1,
           locate: true,
           decoder: {
-            readers: ["ean_reader"], 
+            readers: ["ean_reader"],
           },
         },
         function (result) {
@@ -107,13 +107,13 @@ const ScanBarcode = () => {
 
       const {
         "energy-kcal_serving": energyKcal_serving = "",
-        fat_value = "",
-        "saturated-fat_value": saturatedFat_value = "",
-        carbohydrates_value = "",
-        sugars_value = "",
-        fiber_value = "",
-        proteins_value = "",
-        sodium_value = "",
+        fat_serving = "",
+        "saturated-fat_serving": saturatedFat_serving = "",
+        carbohydrates_serving = "",
+        sugars_serving = "",
+        fiber_serving = "",
+        proteins_serving = "",
+        sodium_serving = "",
       } = nutriments;
 
       return (
@@ -145,31 +145,31 @@ const ScanBarcode = () => {
                 </tr>
                 <tr>
                   <td>Fat</td>
-                  <td>{fat_value} g</td>
+                  <td>{fat_serving} g</td>
                 </tr>
                 <tr>
                   <td>Saturated Fat</td>
-                  <td>{saturatedFat_value} g</td>
+                  <td>{saturatedFat_serving} g</td>
                 </tr>
                 <tr>
                   <td>Carbohydrates</td>
-                  <td>{carbohydrates_value} g</td>
+                  <td>{carbohydrates_serving} g</td>
                 </tr>
                 <tr>
                   <td>Sugars</td>
-                  <td>{sugars_value} g</td>
+                  <td>{sugars_serving} g</td>
                 </tr>
                 <tr>
                   <td>Fiber</td>
-                  <td>{fiber_value} g</td>
+                  <td>{fiber_serving} g</td>
                 </tr>
                 <tr>
                   <td>Proteins</td>
-                  <td>{proteins_value} g</td>
+                  <td>{proteins_serving} g</td>
                 </tr>
                 <tr>
                   <td>Sodium</td>
-                  <td>{sodium_value} g</td>
+                  <td>{sodium_serving} g</td>
                 </tr>
               </tbody>
             </table>
