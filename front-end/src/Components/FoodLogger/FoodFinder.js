@@ -6,6 +6,7 @@ import axios from "axios";
 import data from "../../data/edamam.json";
 import FoodLog from "./FoodLogs";
 import NutritionLabel from "./NutritionLabel";
+import ScanBarcode from "./ScanBarcode";
 const foodItem = "1%20cup%20of%20cooked%20white%20rice";
 const EDAMAM_API = process.env.REACT_APP_EDAMAM_API_URL;
 
@@ -34,13 +35,13 @@ function FoodLogger() {
     const NEW_API = `${EDAMAM_API}${newFoodItem}`; // Use encodeURIComponent to properly encode the newFoodItem
     try {
       const res = await axios.get(NEW_API);
-      if(res.status === 200) 
-      setTimeout(() => {
-        setFoodData(res.data);
-        console.log(foodData)
-        setLoading(false);
-        setIsSubmitted(true);
-      }, 1000);
+      if (res.status === 200)
+        setTimeout(() => {
+          setFoodData(res.data);
+          console.log(foodData);
+          setLoading(false);
+          setIsSubmitted(true);
+        }, 1000);
     } catch (error) {
       console.error(error);
       // Handle the error appropriately
@@ -55,6 +56,7 @@ function FoodLogger() {
   return (
     <div className="foodLoggerBackground">
       <div className="foodLoggerBackground__title">
+        <ScanBarcode />
         <div>Don't know the nutrition facts of what you ate?</div>
         <div>
           Search for an ingredient and we'll provide the nutritional facts!
