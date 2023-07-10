@@ -2,14 +2,14 @@ import React, { useRef, useState } from "react";
 import Quagga from "quagga";
 import axios from "axios";
 import Loader from "./Loader";
+import "./ScanBarcode.scss";
 
 const ScanBarcode = () => {
   const [barcodeID, setBarcodeID] = useState("");
   const [productData, setProductData] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const fileInputRef = useRef(null);
-
-  const BARCODE_API = `https://world.openfoodfacts.org/api/v0/product/${barcodeID}.json`;
 
   const handleButtonClick = () => {
     if (fileInputRef.current) {
@@ -36,6 +36,7 @@ const ScanBarcode = () => {
         } catch (error) {
           console.error("Error decoding barcode:", error);
           setBarcodeID("");
+          setError("Error decoding barcode. Please try again.");
         }
       };
       reader.readAsDataURL(file);
@@ -50,7 +51,7 @@ const ScanBarcode = () => {
           numOfWorkers: navigator.hardwareConcurrency || 1,
           locate: true,
           decoder: {
-            readers: ["ean_reader"], // or other supported barcode formats
+            readers: ["ean_reader"], 
           },
         },
         function (result) {
@@ -62,11 +63,22 @@ const ScanBarcode = () => {
 
   const handleBarcodeSubmit = async (event) => {
     event.preventDefault();
+    if (!barcodeID) {
+      setError("Barcode number is required.");
+      return;
+    }
+
     setLoading(true);
     try {
       await fetchProductData(barcodeID);
+      if (!productData) {
+        setError("No product data found for the submitted barcode.");
+      } else {
+        setError(null);
+      }
     } catch (error) {
       console.error("Error fetching product data:", error);
+      setError("Error fetching product data. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -78,39 +90,90 @@ const ScanBarcode = () => {
         `https://world.openfoodfacts.org/api/v0/product/${barcode}.json`
       );
       setProductData(response.data);
+      setError(null);
     } catch (error) {
-      throw error;
+      console.error("Error fetching product data:", error);
+      setError("Error fetching product data. Please try again.");
     }
   };
 
   const renderProductInfo = () => {
-    if (productData) {
+    if (productData && productData.product) {
       const {
-        product_name,
-        nutriments: {
-          energy_value,
-          fat_value,
-          "saturated-fat_value": saturatedFat_value,
-          carbohydrates_value,
-          sugars_value,
-          fiber_value,
-          proteins_value,
-          sodium_value,
-        },
+        product_name = "",
+        image_front_url = "",
+        nutriments = {},
       } = productData.product;
 
+      const {
+        "energy-kcal_serving": energyKcal_serving = "",
+        fat_value = "",
+        "saturated-fat_value": saturatedFat_value = "",
+        carbohydrates_value = "",
+        sugars_value = "",
+        fiber_value = "",
+        proteins_value = "",
+        sodium_value = "",
+      } = nutriments;
+
       return (
-        <div className="product-info">
-          <h2>Product Information</h2>
-          <p>Product Name: {product_name}</p>
-          <p>Energy (kcal) per serving: {energy_value}</p>
-          <p>Fat per serving: {fat_value}</p>
-          <p>Saturated Fat per serving: {saturatedFat_value}</p>
-          <p>Carbohydrates per serving: {carbohydrates_value}</p>
-          <p>Sugars per serving: {sugars_value}</p>
-          <p>Fiber per serving: {fiber_value}</p>
-          <p>Proteins per serving: {proteins_value}</p>
-          <p>Sodium per serving: {sodium_value}</p>
+        <div className="productInfo">
+          <h2 className="productInfo__title">{product_name}</h2>
+          <div className="productInfo__title__image">
+            {image_front_url && (
+              <img
+                src={image_front_url}
+                alt="Product Image"
+                className="productImage"
+              />
+            )}
+          </div>
+          <div className="productInfo__container">
+            <table className="productInfo__container__table">
+              <thead>
+                <tr>
+                  <th>Nutrition per serving</th>
+                  <th>
+                    Serving Size ({productData.product.serving_size || ""})
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Energy</td>
+                  <td>{energyKcal_serving} kcal</td>
+                </tr>
+                <tr>
+                  <td>Fat</td>
+                  <td>{fat_value} g</td>
+                </tr>
+                <tr>
+                  <td>Saturated Fat</td>
+                  <td>{saturatedFat_value} g</td>
+                </tr>
+                <tr>
+                  <td>Carbohydrates</td>
+                  <td>{carbohydrates_value} g</td>
+                </tr>
+                <tr>
+                  <td>Sugars</td>
+                  <td>{sugars_value} g</td>
+                </tr>
+                <tr>
+                  <td>Fiber</td>
+                  <td>{fiber_value} g</td>
+                </tr>
+                <tr>
+                  <td>Proteins</td>
+                  <td>{proteins_value} g</td>
+                </tr>
+                <tr>
+                  <td>Sodium</td>
+                  <td>{sodium_value} g</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       );
     }
@@ -118,30 +181,43 @@ const ScanBarcode = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleBarcodeSubmit}>
+    <div className="productInfoBackground">
+      <div className="productInfoBackground__container">
+        <div className="barcodeTitle">
+          <ul>Scan a barcode or enter a barcode number</ul>
+        </div>
+        <form onSubmit={handleBarcodeSubmit}>
+          <input
+            type="text"
+            placeholder="Enter barcode number"
+            value={barcodeID}
+            onChange={(e) => setBarcodeID(e.target.value)}
+            className="barcodeInput"
+          />
+          <button type="submit" className="searchBtn">
+            Search
+          </button>
+        </form>
+
+        <button onClick={handleButtonClick}></button>
+        <button onClick={handleButtonClick} className="scanBarcodeBtn">
+          Scan Barcode
+        </button>
         <input
-          type="text"
-          placeholder="Enter barcode number"
-          value={barcodeID}
-          onChange={(e) => setBarcodeID(e.target.value)}
+          ref={fileInputRef}
+          type="file"
+          accept="image/*"
+          capture="environment"
+          style={{ display: "none" }}
+          onChange={handleFileInputChange}
         />
-        <button type="submit">Submit</button>
-      </form>
 
-      <button onClick={handleButtonClick}>Scan Barcode</button>
-      <input
-        ref={fileInputRef}
-        type="file"
-        accept="image/*"
-        capture="environment"
-        style={{ display: "none" }}
-        onChange={handleFileInputChange}
-      />
+        <Loader loading={loading} message="Retrieving product data..." />
 
-      <Loader loading={loading} message="Retrieving product data..." />
+        {error && <p className="error">{error}</p>}
 
-      {productData && renderProductInfo()}
+        {productData && renderProductInfo()}
+      </div>
     </div>
   );
 };

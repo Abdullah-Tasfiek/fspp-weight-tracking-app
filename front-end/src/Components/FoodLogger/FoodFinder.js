@@ -56,16 +56,19 @@ function FoodLogger() {
   return (
     <div className="foodLoggerBackground">
       <div className="foodLoggerBackground__title">
+        <div>Don't know the nutrition facts?</div>
+        <div>We have different options for you to find nutritional data!</div>
+        <div></div>
         <ScanBarcode />
-        <div>Don't know the nutrition facts of what you ate?</div>
-        <div>
-          Search for an ingredient and we'll provide the nutritional facts!
-        </div>
       </div>
       <div className="foodLoggerBackground__container">
         <div className="foodLoggerBackground__container__titles">
           <div>
-            Enter an ingredient for what you are cooking, like:{" "}
+            <div>
+              Write out an ingredient and we'll provide the nutritional facts
+              through AI and Nutrition Analysis!
+            </div>
+            Enter an ingredient for what you are cooking, like:
             <ul className="text-green font-semibold">
               <li>1 cup of cooked white rice</li>
               <li>10 oz chickpeas</li>
@@ -89,6 +92,7 @@ function FoodLogger() {
               onChange={handleTextChange}
               id="name"
               className="foodLoggerBackground__container__btn"
+              placeholder="Enter ingredient"
             />
             <input type="submit" value="Analyze" className="mx-1"></input>
           </form>
