@@ -63,11 +63,11 @@ export default function Tools() {
           </div>
           <div class="toolCard__body">
             <div class="toolCard__heading">
-              <div>Stay Motivated.</div>
+              <div>Motivation.</div>
             </div>
             <div class="toolCard__divider"></div>
             <div class="toolCard__details">
-              <div>Don't give up! Use BetterHealth™ to better your health!</div>
+              <div>Don't give up! Notice your progress and use BetterHealth™ to better your health!</div>
             </div>
           </div>
         </div>
