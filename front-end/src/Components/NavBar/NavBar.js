@@ -28,6 +28,7 @@ const Navigation = () => {
           <Nav className="text-center">
             <Nav.Link href="/welcome">Get Started</Nav.Link>
             <Nav.Link href="/home">Dashboard</Nav.Link>
+            <Nav.Link href="/myfoods/finder">Quick Tools</Nav.Link>
             <Nav.Link href="/myweight/logs">Weights</Nav.Link>
             <Nav.Link href="/myfoods">Foods</Nav.Link>
           </Nav>

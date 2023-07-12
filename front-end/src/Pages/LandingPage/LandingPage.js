@@ -4,6 +4,7 @@ import ExerciseCards from "../../Components/LandingPage/ExerciseCards";
 import Grid from "../../Components/LandingPage/Grid";
 import LandingComponent from "../../Components/LandingPage/LandingComponent";
 import "./LandingPage.scss";
+import Tools from "../../Components/LandingPage/Tools";
 // import Footer from "../../Components/Footer"
 
 export default function LandingPage() {
@@ -11,8 +12,9 @@ export default function LandingPage() {
     <div className="landingPage">
       <div className="landingPage__content">
         <LandingComponent />
-        <ExerciseCards />
+        <Tools />
         <Grid />
+        <ExerciseCards />
         <Community />
       </div>
       {/* <Footer /> */}

@@ -15,8 +15,8 @@ export default function NutritionLabel({ loading, foodData }) {
     return (
       <div className="py-5">
         <div className="font-bold underline text-2xl">Error</div>
-        We had a problem analyzing this. Please check the ingredient spelling
-        or if you have entered quantities for the ingredients.
+        We had a problem analyzing this. Please check the ingredient spelling or
+        if you have entered quantities for the ingredients.
       </div>
     );
   }
@@ -29,9 +29,14 @@ export default function NutritionLabel({ loading, foodData }) {
         </div>
         <div className="nutritionLabelBackground__container__subHeading">
           <div className="nutritionLabelBackground__container__subHeading__divider__top"></div>
-          <div className="nutritionLabelBackground__container__subHeading__serving">
-            Amount Per Serving
-          </div>
+          <table className="nutritionLabelBackground__container__subHeading__serving">
+            <tbody>
+              <tr>
+                <td>Amount Per Serving</td>
+                <td className="text-right">({foodData.totalWeight} g)</td>
+              </tr>
+            </tbody>
+          </table>
           <table className="nutritionLabelBackground__container__subHeading__calories">
             <tbody>
               <tr>
