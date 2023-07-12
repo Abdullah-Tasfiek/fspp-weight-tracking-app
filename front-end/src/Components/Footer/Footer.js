@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="footer__columns__column1">BetterHealth</div>
         <div className="footer__columns__column2">
           <div>
-            <a href="/myweight">Weight</a>
+            <a href="/myweight/logs">Weight</a>
           </div>
           <div>
             <a href="/myfoods">Nutrition</a>
@@ -17,7 +17,7 @@ export default function Footer() {
             <a href="/">About</a>
           </div>
           <div>
-            <a href="/signin">Membership</a>
+            <a href="/welcome">Get Started</a>
           </div>
         </div>
       </div>
