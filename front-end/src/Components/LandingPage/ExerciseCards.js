@@ -40,7 +40,7 @@ export default function ExerciseCards() {
                   target="_blank"
                   href="https://www.everydayhealth.com/fitness/liss-cardio/"
                 >
-                  <span class="key">Exercies</span>
+                  <span class="key">Exercises</span>
                 </a>
               </div>
               <div>
@@ -84,7 +84,7 @@ export default function ExerciseCards() {
                   target="_blank"
                   href="https://www.healthline.com/health/fitness-exercise/free-weight-exercises#advanced-routine"
                 >
-                  <span class="key">Exercies</span>
+                  <span class="key">Exercises</span>
                 </a>
               </div>
               <div>
@@ -109,8 +109,8 @@ export default function ExerciseCards() {
             <div class="exerciseCard__heading">
               <div>
                 If you are trying to gain or lose weight, tracking how many
-                calories you eat is important. It deterimines whether you will
-                lose or gain weight.
+                calories you eat is important. Eatin above your BMR determines whether you will
+                gain or lose weight.
               </div>
             </div>
             <div class="exerciseCard__divider"></div>
