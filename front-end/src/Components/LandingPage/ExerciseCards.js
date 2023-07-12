@@ -5,7 +5,7 @@ export default function ExerciseCards() {
   return (
     <div className="ExerciseCards">
       <div className="exerciseCards__title">
-        Not sure <span className="start">where to start?</span>
+        Not sure <span className="start">how to start</span> your fitness journey?
         <div className="exerciseCards__title__subsection">
           Here are some tips to get started!
         </div>

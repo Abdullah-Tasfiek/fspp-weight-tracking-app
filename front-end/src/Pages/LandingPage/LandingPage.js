@@ -5,7 +5,6 @@ import Grid from "../../Components/LandingPage/Grid";
 import LandingComponent from "../../Components/LandingPage/LandingComponent";
 import "./LandingPage.scss";
 import Tools from "../../Components/LandingPage/Tools";
-// import Footer from "../../Components/Footer"
 
 export default function LandingPage() {
   return (
@@ -17,7 +16,6 @@ export default function LandingPage() {
         <ExerciseCards />
         <Community />
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }
