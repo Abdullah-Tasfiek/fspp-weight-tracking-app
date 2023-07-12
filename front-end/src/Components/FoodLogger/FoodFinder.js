@@ -3,11 +3,9 @@ import "./FoodFinder.scss";
 import { useState, useEffect } from "react";
 import Loader from "./Loader";
 import axios from "axios";
-import data from "../../data/edamam.json";
 import FoodLog from "./FoodLogs";
 import NutritionLabel from "./NutritionLabel";
 import ScanBarcode from "./ScanBarcode";
-const foodItem = "1%20cup%20of%20cooked%20white%20rice";
 const EDAMAM_API = process.env.REACT_APP_EDAMAM_API_URL;
 
 function FoodLogger() {
@@ -18,21 +16,27 @@ function FoodLogger() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [foodData, setFoodData] = useState([]);
   const [newFoodItem, setNewFoodItem] = useState("");
+  const [error, setError] = useState(null);
   const errorMessage =
-    "We had a problem analyzing this. Please check the ingredient spelling or if you have entered a quantities for the ingredients.";
+    "We had a problem analyzing this. Please check the ingredient spelling or if you have entered quantities for the ingredients.";
 
   const handleTextChange = (event) => {
     setFood({ ...food, [event.target.id]: event.target.value });
     setNewFoodItem(event.target.value);
-    console.log("newFoodITEM!!!!!!:::::", newFoodItem);
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (newFoodItem.trim() === "") {
+      setError("Please enter an ingredient");
+      return;
+    }
+
     const formattedInput = formatFoodDataFromUser(newFoodItem);
     setNewFoodItem(formattedInput);
     setLoading(true);
-    const NEW_API = `${EDAMAM_API}${newFoodItem}`; // Use encodeURIComponent to properly encode the newFoodItem
+    const NEW_API = `${EDAMAM_API}${newFoodItem}`;
     try {
       const res = await axios.get(NEW_API);
       if (res.status === 200)
@@ -41,10 +45,11 @@ function FoodLogger() {
           console.log(foodData);
           setLoading(false);
           setIsSubmitted(true);
+          setError("");
         }, 1000);
     } catch (error) {
       console.error(error);
-      // Handle the error appropriately
+      setError(errorMessage);
     }
   };
 
@@ -93,8 +98,10 @@ function FoodLogger() {
               id="name"
               className="foodLoggerBackground__container__btn"
               placeholder="Enter ingredient"
+              autoComplete="off"
             />
             <input type="submit" value="Analyze" className="mx-1"></input>
+            {error && <p>{error}</p>}
           </form>
         )}
         {isSubmitted ? (

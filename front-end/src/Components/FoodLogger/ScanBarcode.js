@@ -74,7 +74,7 @@ const ScanBarcode = () => {
       if (!productData) {
         setError("No product data found for the submitted barcode.");
       } else {
-        setError(null);
+        setError("");
       }
     } catch (error) {
       console.error("Error fetching product data:", error);
@@ -90,7 +90,7 @@ const ScanBarcode = () => {
         `https://world.openfoodfacts.org/api/v0/product/${barcode}.json`
       );
       setProductData(response.data);
-      setError(null);
+      setError("");
     } catch (error) {
       console.error("Error fetching product data:", error);
       setError("Error fetching product data. Please try again.");
