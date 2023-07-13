@@ -33,7 +33,7 @@ export default function NutritionLabel({ loading, foodData }) {
             <tbody>
               <tr>
                 <td>Amount Per Serving</td>
-                <td className="text-right">({foodData.totalWeight} g)</td>
+                <td className="text-right">({Math.floor(foodData.totalWeight)}g)</td>
               </tr>
             </tbody>
           </table>
